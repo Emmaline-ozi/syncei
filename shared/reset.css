@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Box sizing for consistent padding/margin */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+body{
+    font-family: "Quattrocento Sans", sans-serif;
+    line-height: 1.5;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem); 
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6,strong{
+    font-family: "Playfair Display", sans-serif;
+}
+p,span,a,li{
+    font-family: "Quattrocento Sans", sans-serif;
+}
+/* =====font-size===== */
+p, h4, h5, h6 {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem); /* Paragraphs scale between 16px and 18px */
+}
+h1{
+    font-size: clamp(1.5rem, 3vw + 1rem, 3rem); /* H1 scales between 24px and 48px */
+}
+h2{
+    font-size: clamp(1.25rem, 2vw + 1rem, 2.5rem); /* H2 scales between 20px and 40px */
+}
+h3{
+    font-size: clamp(1.125rem, 1.5vw + 1rem, 2rem); /* H3 scales between 18px and 32px */
+}
+
+/* Smooth fonts in Safari */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*  -webkit-overflow-scrolling: touch;  */
+
+/* Basic styles for buttons and inputs */
+button, input, textarea, select {
+    font: inherit; /* Ensure font inheritance */
+    -webkit-appearance: none; /* Remove native styling on Safari */
+    -moz-appearance: none; /* Remove native styling on Firefox */
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* Remove list styles */
+ol, ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    -webkit-cursor: pointer;
+    cursor: pointer;
+}
+/* Image responsiveness */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -webkit-user-drag: none; /* Prevent image dragging in Safari */
+}
+video {
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+    border: none; 
+    outline: none; 
+    background-color: transparent; 
+  }
+  
+
+/* General button reset */
+button {
+    -webkit-appearance: none;  /* Remove default appearance in Safari */
+    -moz-appearance: none;     /* Remove default appearance in Firefox */
+    appearance: none;          /* Ensure it's removed for all browsers */
+    /* Reset button border, background, and padding */
+    border: 2px solid transparent; /* Set a transparent border initially */
+    background: transparent;      /* Remove background styling */
+    /* padding: 10px 20px;           Standard padding */
+    /* font-size: 16px;              Standard font size */
+    font-family: inherit;         /* Inherit font family */
+    color: inherit;               /* Inherit text color */
+    -webkit-cursor: pointer;
+    cursor: pointer;             /* Pointer cursor on hover */
+    text-align: center;           /* Ensure text is centered */
+    /* border-radius: 5px;           Optional: Rounded corners */
+    outline: none;                /* Remove outline to customize focus */
+}
+
+/* Optional: Button hover effects */
+/* button:hover {
+    border-color: #3498db;      
+    background-color: rgba(52, 152, 219, 0.1); 
+} */
+
+/* Optional: Focus styles (important for accessibility) */
+/* button:focus {
+    border-color: #2980b9;     
+    background-color: rgba(52, 152, 219, 0.2); 
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);  
+} */
+
+/* Optional: Disabled button styles */
+/* button:disabled {
+    cursor: not-allowed;         
+    opacity: 0.5;                  
+    border-color: #ccc;           
+    background-color: #f0f0f0;     
+} */
+
+/* Optional: Active button styles */
+/* button:active {
+    background-color: rgba(52, 152, 219, 0.2); 
+    border-color: #2980b9;              
+} */
+
+/* input[type="checkbox"]
+{
+    accent-color: #d890f9;
+} */
+input[type="text"],
+textarea
+{
+    caret-color: #d890f9;
+}
+
+/* Ensure consistency on buttons in forms */
+/* input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: inherit;
+    color: inherit;
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+} */
+
+/* input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    border-color: #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+} */
+
+/* input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus {
+    border-color: #2980b9;
+    background-color: rgba(52, 152, 219, 0.2);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+} */
+
+/* Optional: Styling for buttons inside forms */
+/* button, input[type="button"], input[type="submit"], input[type="reset"] {
+    font-family: inherit;         
+    font-size: 16px;               
+    text-align: center;           
+} */
+::selection{
+    color: #d890f9;
+}
+
+/* safari resets */
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+}
+/* using transform */
+.animated-element {
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+/* forms */
+input[type="text"], textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+}
+/* for clip paths */
+.clipped-element {
+    -webkit-clip-path: circle(50%);
+    clip-path: circle(50%);
+}
+/* cursors */.custom-cursor {
+    cursor: pointer;
+    -webkit-cursor: pointer;
+}
+
