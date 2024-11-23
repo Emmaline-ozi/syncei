@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.matchMedia().add("(max-width: 1023px)", () => {
         gsap.to(cards, {
-            xPercent: -100 * (cards.length) ,
+            xPercent: -100 * (cards.length - 1.5) ,
             scrollTrigger:{
                 trigger:".team-flex-wrap",
                 start:"top 5%",
@@ -217,10 +217,6 @@ const acc = document.querySelectorAll(".accordion");
           if (panel) {
             panel.style.display = "block"; // Show the current panel
           }
-  
-          // Display the target image
-          const dataId = this.getAttribute("data-id");
-          const targetImg = entry.querySelector(`#${dataId}`); // Scoped to the current entry
   
           
         }

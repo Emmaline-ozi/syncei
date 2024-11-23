@@ -82,7 +82,7 @@
     width: 50%;
     height: 100vh;
     z-index: var(--z-block);
-    background-color: white;
+    background: url(/imgs/backgrounds/n2.svg);
 }
 .block.block-left{
     left: 0;
@@ -177,7 +177,10 @@
         height: min-content;
     }
     .top-left{
-        left: 30%;
+        left: 39%;
+    }
+    .bottom-right{
+        bottom: 17%;
     }
 }
 @media  (min-width: 768px){
@@ -205,13 +208,13 @@
     }
     .top-left{
         top: 25%;
-        left: 38%;
+        left: 39%;
     }
     .top-right{
         right: 45%;
     }  
     .bottom-right{
-        bottom: 1%;
+        bottom: 2%;
         right: 45%;
     }
 }
@@ -392,7 +395,7 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    text-shadow: 0 0 5px rgb(63, 63, 63);
+    text-shadow: 0 0 5px rgba(63, 63, 63, 0.425);
   }
   .logos-slide span:nth-of-type(even){
     color: rebeccapurple;
@@ -422,6 +425,10 @@ section.inter{
     padding: 5%;
     min-height: 50vh;
     min-height: 50dvh;
+    background: url(/imgs/backgrounds/n01.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .graphic div{
     margin: auto;
@@ -986,6 +993,7 @@ section.inter{
 }
 /* cta  */
 .cta{
+    position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     padding-inline: 5%;
@@ -994,10 +1002,21 @@ section.inter{
     display: -webkit-grid;
     display: grid;
     place-content: center;
-    background-color: black;
     color: white;
+    background-color: black;
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);  
+}
+.backit{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url(/imgs/backgrounds/burn.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .cta h2{
     margin-top: 2rem;

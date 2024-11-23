@@ -45,15 +45,13 @@
     }
 
 body{ 
-    background: url(/imgs/backgrounds/p3.svg);
+    /* background: url(/imgs/backgrounds/p3.svg); */
     background-attachment: scroll; 
     background-repeat: no-repeat;
     background-size: cover;
 } 
 
 .hero-company{
-    /* min-height: 100vh;
-    min-height: 100dvh; */
     width: 100%;
     position: relative;
     margin-top: 5rem;
@@ -79,6 +77,18 @@ body{
 .btn_wrapper{
     position: relative;
     display: none;
+}
+.backit{
+    position: absolute;
+    inset: 0;
+    z-index: -100;
+    background: url(/imgs/backgrounds/n2.svg);
+    background-attachment: fixed; 
+    background-position: bottom top;
+    background-size: cover;
+}
+.about{
+    position: relative;
 }
 @media (min-width:768px){
     .hero-company{
@@ -146,10 +156,10 @@ body{
     .btn_wrapper{
         display: block;
         z-index: 100;
+        cursor: pointer;
     }
     .btn_wrapper button{
-        z-index: inherit;
-        cursor: pointer;
+        z-index: 100;
         position: relative;
         border-radius: 50%;
         display: -webkit-box;
@@ -163,15 +173,16 @@ body{
         align-items: center;
         width: 100px;
         height: 100px;
+        transition: transform .4s ease-in-out;
         background: var(--accent-color);
     }
-    .btn_wrapper button:hover{
-        -webkit-transform:scale(1.2);
-        -ms-transform:scale(1.2);
-        transform:scale(1.2);
+    .btn_wrapper button:hover {
+        -webkit-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        transform:scale(1.1);
     }
     .outter{
-        z-index: inherit;
+        z-index: 100;
         width: 200px;
         max-width: 200%;
         height: 200px;
@@ -187,7 +198,7 @@ body{
         transform-box: fill-box; 
     }
     .inner{
-        z-index: inherit;
+        z-index: 100;
         width:100%;
     }
 }
@@ -438,7 +449,7 @@ body{
    width: 3rem;
    padding-top: 5rem;
 }
-@media(max-width: 768px){
+@media(max-width: 1023px){
    .flexer aside{
     position: absolute;
     top: 0;
@@ -463,6 +474,11 @@ body{
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     background-color: var(--secondary-color);
+}
+@media(min-width: 768px){
+    .side-text a{
+        width: 1.5rem;
+    }
 }
 .dsp{
     padding-top: 4.5rem;
@@ -571,6 +587,10 @@ body{
         transform: translate3d(0 , 0, 0);
     }
 
+}
+.spacer{
+    height: 5dvh;
+    background-color: black;
 }
 .divider-middle{
     position: relative;
@@ -1026,8 +1046,8 @@ body{
 
 /* faqs */
 .faqs{
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding-block: 3rem;
 }
 @media (max-width: 767px){
@@ -1108,11 +1128,7 @@ body{
 
 
 /* backgrounds */
-.backit{
-    z-index: -1;
-    background: url(/imgs/backgrounds/p3.svg);
-    background-attachment: fixed; 
-}
+
 .backit_black{
     z-index: -2;
     position: absolute;
