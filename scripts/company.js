@@ -7,7 +7,7 @@ gsap.ticker.lagSmoothing(0);
 
 //cards ani
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.matchMedia().add("(max-width: 767px)", () => {
+    gsap.matchMedia().add("(max-width: 980px)", () => {
       gsap.utils.toArray(".about-wrapper").forEach((card) => {     
         gsap.fromTo(card, 
           {
@@ -27,65 +27,59 @@ document.addEventListener("DOMContentLoaded", () => {
       });     
     });
 
-    gsap.matchMedia().add("(min-width: 768px)", () => {
-        gsap.utils.toArray(".about-wrapper").forEach((card, index) => {     
-          
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".about-wrapper",  
-                    start: "top 100%",  
-                    end: "top top",    
-                    scrub: true,
-                    markers:false,
-                    toggleActions: "play none none none",        
-                    onEnter: () => { card.style.transition = "transform 0.6s ease-out"; },
-                    onLeave: () => { card.style.transition = "none"; },
-                }     
-            });
-
-            tl.fromTo(card,   
-            {
-                y: 80,
-            },
-            {
-                y:0,
-                ease:"power3.out",
-                delay: index * 0.3,
-            }        
-            );         
-        });
-    });
-
 });
   
+// sidebar & sections
 document.addEventListener("DOMContentLoaded", () => {
-    const parentSection = document.querySelector('.flexer'); // Parent element
+    const parentSection = document.querySelector('.more'); // Parent element
     const stickySidebar = document.querySelector('#stick'); // Sticky sidebar (child)
     const anchors = document.querySelectorAll('.anchor a');
     const contentSections = document.querySelectorAll('.stn');
     
     // Pin the sidebar inside the parent section
+    gsap.matchMedia().add("(max-width: 1024px)", () => {
     ScrollTrigger.create({
-      trigger: parentSection,    // The parent element is the trigger
-      pin: stickySidebar,        // The child (sticky sidebar) gets pinned
-      start: "top top",           // Pin the sidebar when the top of the parent reaches the top of the viewport
-      endTrigger:".divider-middle",
-      end: "bottom 95%", // End when the bottom of the parent reaches the bottom of the viewport
-      scrub: true,                // Sync with the scroll position for smooth pinning
-      markers: false,              // Show markers for debugging (optional)
+      trigger: parentSection,    
+      pin: stickySidebar,        
+      start: "top 20%",           
+      end: "bottom 95%", 
+      scrub: true,              
+      markers: false,            
       pinSpacing: true,
 
+        });
     });
+    gsap.matchMedia().add("(min-width: 1024px)", () => {
+    ScrollTrigger.create({
+      trigger: parentSection,    
+      pin: stickySidebar,        
+      start: "top top",           
+      end: "bottom 95%",
+      endTrigger:"#steps", 
+      scrub: true,              
+      markers: false,            
+      pinSpacing: true,
+
+        });
+    });
+    
 
     // sections
    contentSections.forEach((section, index) => {
         ScrollTrigger.create({
             trigger: section,
-            start: "top 80%",
-            end: "bottom top",
+            start: "top 95%",
+            end: "bottom 50%",
             scrub: true,
-            markers: true,
+            markers: false,
             onEnter: () => {
+                anchors.forEach(anchor => anchor.classList.remove('active'));
+                contentSections.forEach(sec => sec.classList.remove('visible'));
+
+                anchors[index].classList.add('active');
+                section.classList.add('visible');
+            },
+            onEnterBack: () => {
                 anchors.forEach(anchor => anchor.classList.remove('active'));
                 contentSections.forEach(sec => sec.classList.remove('visible'));
 
@@ -95,12 +89,143 @@ document.addEventListener("DOMContentLoaded", () => {
             onLeave: () => {
                 anchors[index].classList.remove('active');
                 section.classList.remove('visible');
+            },
+            onLeaveBack: () => {
+                anchors[index].classList.remove('active');
+                section.classList.remove('visible');
             }
         });
    });
 
 });
   
+    // team
+document.addEventListener("DOMContentLoaded", () => {
+   
+    const cards = gsap.utils.toArray(".team-flex-wrap .card");
+
+    gsap.matchMedia().add("(max-width: 1023px)", () => {
+        gsap.to(cards, {
+            xPercent: -100 * (cards.length) ,
+            scrollTrigger:{
+                trigger:".team-flex-wrap",
+                start:"top 5%",
+                pin:true,
+                ease: "ease-in-out",
+                scrub: true,
+                markers: true,
+            }
+        })
+    });
+    gsap.matchMedia().add("(min-width: 1024px)", () => {
+        gsap.to(cards, {
+            xPercent:-100 * (cards.length - 1.5),
+            scrollTrigger:{
+                trigger:".team-flex-wrap",
+                start:"top 5%",
+                pin: true,
+                ease: "none",
+                scrub: true,
+                markers: false,
+            }
+        })
+    });
+         
+});
+ 
+// testimonials
+const container = document.querySelector('#slider');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+container.addEventListener('mousedown', (e) => {
+    isDown = true;
+    // container.classList.add('active');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('mouseleave', () => {
+    isDown = false;
+    // container.classList.remove('active');
+});
+
+container.addEventListener('mouseup', () => {
+    isDown = false;
+    // container.classList.remove('active');
+});
+
+// Prevent default text selection behavior
+container.addEventListener('dragstart', (e) => {
+    e.preventDefault(); // Prevent default drag behavior
+});
+
+container.addEventListener('mousemove', (e) => {
+    if (!isDown) return; // Stop the fn from running
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1.5; // Adjust the multiplier for smoother drag speed
+    container.scrollLeft = scrollLeft - walk;
+});
+
+// Add touch support for mobile devices
+container.addEventListener('touchstart', (e) => {
+    isDown = true;
+    // container.classList.add('active');
+    startX = e.touches[0].pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('touchend', () => {
+    isDown = false;
+    // container.classList.remove('active');
+});
+
+container.addEventListener('touchmove', (e) => {
+    if (!isDown) return; // Stop the fn from running
+    e.preventDefault();
+    const x = e.touches[0].pageX - container.offsetLeft;
+    const walk = (x - startX) * 1.5; // Adjust the multiplier for smoother drag speed
+    container.scrollLeft = scrollLeft - walk;
+});
+
+// FAQS
+
+const acc = document.querySelectorAll(".accordion");
+  
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        // Check if the clicked accordion is already active
+        const isAlreadyActive = this.classList.contains("active");
+  
+        // Close all accordion panels and remove the active class from each
+        acc.forEach((accordion) => {
+          accordion.classList.remove("active");
+          const panel = accordion.nextElementSibling;
+          if (panel) {
+            panel.style.display = "none"; // Hide all panels
+          }
+        });
+  
+        // If the clicked accordion is not already active
+        if (!isAlreadyActive) {
+          this.classList.add("active");
+  
+          let panel = this.nextElementSibling;
+          if (panel) {
+            panel.style.display = "block"; // Show the current panel
+          }
+  
+          // Display the target image
+          const dataId = this.getAttribute("data-id");
+          const targetImg = entry.querySelector(`#${dataId}`); // Scoped to the current entry
+  
+          
+        }
+      });
+    };
 
 
 
@@ -109,43 +234,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// // Sticky Sidebar Functionality
-// const anchors = document.querySelectorAll('.anchor a');
-// const contentSections = document.querySelectorAll('.stn');
 
-// // Function to create an observer with the desired threshold
-// const createObserver = (threshold) => {
-//     const removeActiveClasses = () => {
-//         anchors.forEach(anchor => anchor.classList.remove('active'));
-//         contentSections.forEach(section => section.classList.remove('visible'));
-//     };
 
-//     const handleIntersection = (entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 removeActiveClasses();
-//                 document.querySelector(`.side-text a[href='#${entry.target.id}']`).classList.add('active');
-//                 entry.target.classList.add('visible');
-//             }
-//         });
-//     };
-
-//     const observerOptions = { threshold };
-//     const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-//     // Observe all sections
-//     contentSections.forEach(section => observer.observe(section));
-// };
-
-// // Set up media query and initialize observer
-// const mediaQuery = window.matchMedia('(max-width: 768px)');
-// const initObserver = () => {
-//     const threshold = mediaQuery.matches ? 0.5 : 0.8; // Change threshold based on screen size
-//     createObserver(threshold);
-// };
-
-// // Listen for media query changes
-// mediaQuery.addEventListener('change', initObserver);
-
-// // Initialize observer on page load
-// initObserver();
