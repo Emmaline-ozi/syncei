@@ -113,6 +113,35 @@ document.addEventListener("DOMContentLoaded", () => {
                   markers: false,
               }
           });
+          gsap.to(".record", {
+              xPercent: 550,
+              opacity: 0,
+              ease: "power2.inOut",
+              scrollTrigger:{
+                  endTrigger: ".hero",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: true,
+                  markers: false,
+              }
+          });
+
+          gsap.fromTo( ".upper", 
+            {
+              xPercent: 200,
+            },
+            {
+              xPercent: 0,
+              scrollTrigger: {
+                endTrigger: ".hero",
+                start: "10% top",
+                end: "bottom top",
+                scrub: true,
+                markers: false,   
+              },
+              ease: "ease-in-out",  
+            });
+
           const content = document.querySelector(".pop");
           gsap.fromTo( content, 
             {
@@ -127,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrub: true,   
                 markers: false,      
               },
-              ease: "power2.inOut",  
+              ease: "ease-in-out",  
             });
 
 });

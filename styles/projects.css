@@ -47,7 +47,7 @@ body{
     display: none;
 }
 
-h1{
+.hero h1{
     font-size: 6rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -86,7 +86,6 @@ h1{
     background: red;
     border-radius: 50%;
     animation: pulse 3s infinite ease-in-out alternate;
-    
 }
 .rec-dot img{
         transform: scale(5);
@@ -115,6 +114,13 @@ h1{
     object-fit: cover;
     object-position: center;
     transform: scale(1.5);
+}
+.img-holder::before{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( #000000, #0000003a);
+    z-index: 1;
 }
 
 .header{
@@ -181,6 +187,17 @@ h1{
 
 }
 
+.hold{
+    z-index: 2;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 5rem 5rem;
+}
+.hold h2{
+    
+}
 
 
 
@@ -193,6 +210,12 @@ h1{
     color: white;
     overflow-x: hidden;
     transform: translateY(50px);
+}
+.content h1{
+    font-size: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
 }
 .intro{
     display: flex;
