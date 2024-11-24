@@ -34,13 +34,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // hero
 document.addEventListener("DOMContentLoaded", () => {
-    const contentHolderHeight = document.querySelector(".content-holder").offsetHeight;
-    const imgHolderHeight = window.innerHeight;
-    const additionalScroll = window.innerHeight;
-
-    const totalBodyHeight = contentHolderHeight + imgHolderHeight + additionalScroll;
-    document.body.style.height = `${totalBodyHeight}px`;
-    });
     ScrollTrigger.create({
             trigger: ".hero",
             start:  "top top",
@@ -49,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
             pin: true,
             markers: false,
         });
-
 
         gsap.to(".first",{
             x: () => -innerWidth * 3,
@@ -60,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 start: "top top",
                 end: "bottom top",
                 scrub: true,
-                markers: true,
+                markers: false,
             }
         });
         gsap.to(".second",{
@@ -88,14 +80,55 @@ document.addEventListener("DOMContentLoaded", () => {
                 markers: false,
             }
         });
-        gsap.to(".img-holder img", {
-            scale: 1,
-            ease: "power2.inOut",
-            scrollTrigger:{
-                endTrigger: ".hero",
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
-                markers: false,
-            }
-        });
+          gsap.to(".img-holder img", {
+              scale: 1,
+              ease: "power2.inOut",
+              scrollTrigger:{
+                  endTrigger: ".hero",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: true,
+                  markers: false,
+              }
+          });
+          gsap.to(".scroll", {
+              scale: 0,
+              ease: "power2.inOut",
+              scrollTrigger:{
+                  endTrigger: ".hero",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: true,
+                  markers: false,
+              }
+          });
+          gsap.to(".scroll", {
+              opacity: 0,
+              ease: "power2.inOut",
+              scrollTrigger:{
+                  endTrigger: ".hero",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: true,
+                  markers: false,
+              }
+          });
+          const content = document.querySelector(".pop");
+          gsap.fromTo( content, 
+            {
+              y: 50,
+            },
+            {
+              y: 0, 
+              scrollTrigger: {
+                trigger: content,  
+                start: "top bottom",  
+                end: "top 90%",    
+                scrub: true,   
+                markers: false,      
+              },
+              ease: "power2.inOut",  
+            });
+
+});
+   
