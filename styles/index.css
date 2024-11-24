@@ -32,7 +32,7 @@
     height: 100vh;
     height: 100dvh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .hero video{
     width: 100%;
@@ -48,15 +48,15 @@
 }
 .hero .copy{
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
     color: white;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -67,10 +67,15 @@
     -moz-user-select: none;
      -ms-user-select: none;
     -webkit-user-select: none;
-      user-select: none;
+      user-select: none; 
+      mix-blend-mode:hard-light;   
 }
 .hero .copy span{
     color: var(--accent-color);
+}
+
+.slide-right{
+    transform: translateX(-100%);
 }
 .hero .blocks{
     width: 100%;
@@ -90,30 +95,33 @@
 .block.block-right{
     right: 0;
 }
-.hero .letter{
+.letters{
     position: absolute;
-    z-index: var(--z-letter);
-    padding: 0 0.2em;
-    mix-blend-mode: difference;
-}
-.letters .row{
+    top: 30%;
+    display: flex;
     width: 100%;
+    height: 50%;
+    justify-content: center;
+    gap: 3rem;   
+}
+
+.letters .row{
+    width: max-content;
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
 }
-.top-left{
-    top: 32%;
-    left: 42%;
+
+.hero .letter{
+    position: absolute;
+    top: 0;
+    display: grid;
+    gap: 1rem;
+    z-index: var(--z-letter);
+    mix-blend-mode: difference;
 }
-.top-right{
-    top: 32%;
-    right: 42%;
-}
-.bottom-right{
-    bottom: 32%;
-    right: 42%;
-}
+
+
 /* ==============BREAKPOINTS-HERO=============== */
 @media  (min-width: 320px){
     .hero .copy p{
@@ -122,136 +130,31 @@
         font-weight: 900;
         text-shadow: 0 0 20px #ffffff;
     }
-    .hero .letter{
-        padding: 0;
-    }
-    .top-left{
-        top: 30%;
-        left: 25%;
-    } 
-    .top-right{
-        top: 32%;
-        right: 45%;
-    }
     
-    .bottom-right{
-        bottom: 8%;
-        right: 45%;
-    }
-    .row .top-left svg{
-        width: 5rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-    }
-    .row .top-right svg{
-        width: 2rem;
-    }
-    .row .bottom-right svg{
-        width: 2rem;
-    }
-    .row .top-left #stroke_symbol{
-        stroke-width: 6px;
-    }
-    .row .top-left #stroked_sword{
-        stroke-width: 8px;
-    }
 }
 @media  (min-width: 375px){
     .hero .copy p{
         font-size: 0.6rem;
     }
-    .top-left{
-        top: 30%;
-        left: 30%;
-    }
+
 }
 @media  (min-width: 425px){
     .hero .copy p{
         font-size: 0.7rem;
     }
-    .row .top-left svg{
-        width: 5.8rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-    }
-    .top-left{
-        left: 39%;
-    }
-    .bottom-right{
-        bottom: 17%;
-    }
+  
 }
 @media  (min-width: 768px){
     .hero .copy p{
         font-size: 0.8rem;
         font-weight: 500;
     }
-    .row .top-left svg{
-        width: 7rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-    }
-    .row .top-right svg{
-        width: 2.5rem;
-    }
-    .row .bottom-right svg{
-        width: 2.5rem;
-    }
-    .row .top-left #stroke_symbol{
-        stroke-width: 5px;
-    }
-    .row .top-left #stroked_sword{
-        stroke-width: 5px;
-    }
-    .top-left{
-        top: 25%;
-        left: 39%;
-    }
-    .top-right{
-        right: 45%;
-    }  
-    .bottom-right{
-        bottom: 2%;
-        right: 45%;
-    }
+   
 }
 @media  (min-width: 1024px){
     .hero .copy p{
         font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem); 
         font-weight: 500;
-    }
-    .row .top-left svg{
-        width: 8rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-    }
-    .row .top-right svg{
-        width: 3rem;
-    }
-    .row .bottom-right svg{
-        width: 3rem;
-    }
-    .row .top-left #stroke_symbol{
-        stroke-width: 6px;
-    }
-    .row .top-left #stroked_sword{
-        stroke-width: 10px;
-    }
-    .top-left{
-        top: 22%;
-        left: 40%;
-    }
-    .top-right{
-        right: 45%;
-        top: 29%;
-    }  
-    .bottom-right{
-        bottom: 0%;
-        right: 45%;
     }
 }
 @media  (min-width: 1140px){
@@ -259,58 +162,18 @@
         font-weight: 500;
         text-shadow: 0 0 10px #ffffff;
     }
-    .row .top-left svg{
-        width: 8rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-    }
-    .row .top-right svg{
-        width: 3rem;
-    }
-    .row .bottom-right svg{
-        width: 3rem;
-    }
+   
     .top-left{
-        top: 26%;
         left: 44%;
     }
-    .top-right{
-        top: 34%;
-    }  
-    .bottom-right{
-        bottom: 1%;
-    }
+ 
 }
 @media  (min-width: 2560px){
     .hero .copy p{
         font-size: clamp(1.25rem, 2vw + 1rem, 2.5rem); /* H2 scales between 20px and 40px */
         font-weight: 900;
     }
-    .row .top-left svg{
-        width: 15rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
-    }
-    .row .top-right svg{
-        width: 40rem;
-    }
-    .row .bottom-right svg{
-        width: 40rem;
-    }
-    .top-left{
-        top: 26%;
-        left: 37%;
-    }
-    .top-right{
-        top: 40%;
-        right: 42%;
-    }  
-    .bottom-right{
-        bottom: 25%;
-        right: 42%;
-    }
+    
 }
 
 /* ============= infinite loop ============ */
@@ -425,10 +288,10 @@ section.inter{
     padding: 5%;
     min-height: 50vh;
     min-height: 50dvh;
-    background: url(/imgs/backgrounds/n01.svg);
+    background: url(/imgs/backgrounds/n_light.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 .graphic div{
     margin: auto;
@@ -668,6 +531,8 @@ section.inter{
    color: white;
    text-align: center;
    background-color: black;
+   background: url(/imgs/backgrounds/n_dark.svg);
+    background-attachment: fixed;
 }
 .projects a{
     color: whitesmoke;
@@ -743,7 +608,7 @@ section.inter{
     width: 4.5rem;
     height: 4.5rem;
     border-top-left-radius: 50%;
-    background-color: #000000;
+    background: black;
 }
 .subprojects .curve::before,
 .subprojects .curve::after{
@@ -867,6 +732,7 @@ section.inter{
     min-height: -webkit-max-content;
     min-height: -moz-max-content;
     min-height: max-content;
+    background: url(/imgs/backgrounds/n_light.svg);
 }
 .testimonials h2{
     font-weight: 500;
@@ -993,7 +859,8 @@ section.inter{
 }
 /* cta  */
 .cta{
-    position: relative;
+    position: sticky;
+    top: 0;
     min-height: 100vh;
     min-height: 100dvh;
     padding-inline: 5%;

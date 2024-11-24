@@ -44,12 +44,12 @@
     pointer-events: none;
     }
 
-body{ 
-    /* background: url(/imgs/backgrounds/p3.svg); */
+/* body{ 
+    background: url(/imgs/backgrounds/n_light.svg);
     background-attachment: scroll; 
     background-repeat: no-repeat;
     background-size: cover;
-} 
+}  */
 
 .hero-company{
     width: 100%;
@@ -82,7 +82,7 @@ body{
     position: absolute;
     inset: 0;
     z-index: -100;
-    background: url(/imgs/backgrounds/n2.svg);
+    background: url(/imgs/backgrounds/n_light.svg);
     background-attachment: fixed; 
     background-position: bottom top;
     background-size: cover;
@@ -1047,6 +1047,7 @@ body{
 /* faqs */
 .faqs{
     background-color: #000000;
+    background: url(/imgs/backgrounds/n_dark.svg);
     color: rgb(255, 255, 255);
     padding-block: 3rem;
 }
@@ -1073,12 +1074,11 @@ body{
     transition: border 0.4s ease-in-out,background 0.4s ease-in-out;
     border-bottom: 4px solid var(--secondary-color);
 }
-.faqs .accordion.active, .accordion:hover{
+ .accordion.active, .accordion:hover{
     background-color: var(--accent-color);
-    background: url(/imgs/backgrounds/n1.svg);
+    background: url(/imgs/backgrounds/nback.svg);
 }
 .accordion.active{
-    background: url(/imgs/backgrounds/n1.svg);
     border-bottom: none;
 }
 .panel{
@@ -1161,4 +1161,7 @@ body{
 .more{
     /* border-bottom-left-radius:  5%;
     border-bottom-right-radius: 10%; */
+}
+.back_white{
+    background: url(/imgs/backgrounds/n_light.svg);
 }
