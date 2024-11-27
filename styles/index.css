@@ -413,13 +413,12 @@ section.inter{
     height: 3rem;
     text-wrap: nowrap;
     margin-right: 1.5rem;
-    /* padding: 0.75rem 0; */
     border: 3px solid var(--secondary-color);
     border-radius: 1.625rem;
     font-weight: 700;
     text-align: center;
-    color: rgb(255, 255, 255);
-    color:var(--accent-color);
+    color: #570191;
+    color:black;
     display: -ms-grid;
     display: -webkit-grid;
     display: grid;
@@ -532,7 +531,7 @@ section.inter{
    color: white;
    text-align: center;
    background-color: black;
-   background: url(/imgs/backgrounds/n_dark.svg);
+   background: url(/imgs/backgrounds/dense-acc-specsm.svg);
     background-attachment: fixed;
 }
 .projects a{
@@ -565,7 +564,6 @@ section.inter{
     width: inherit;
     border-radius: 1.25rem;
     overflow: hidden;
-    background: plum;
     margin-bottom: 1.5rem;
     border-bottom-right-radius: 0;
 }
@@ -733,7 +731,7 @@ section.inter{
     min-height: -webkit-max-content;
     min-height: -moz-max-content;
     min-height: max-content;
-    background: url(/imgs/backgrounds/n_light.svg);
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
 }
 .testimonials h2{
     font-weight: 500;
@@ -862,29 +860,34 @@ section.inter{
 .cta{
     position: sticky;
     top: 0;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding-inline: 5%;
+    height: 100vh;
+    height: 100dvh;
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);  
+}
+.cta-card{
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
     display: -ms-grid;
     display: -webkit-grid;
     display: grid;
     place-content: center;
     color: white;
-    background-color: black;
-    backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);  
+    backdrop-filter: blur(24px);
 }
-.backit{
+ .backit{
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url(/imgs/backgrounds/burn.svg);
+    background: url(/imgs/backgrounds/dddepth-320.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
 }
 .cta h2{
     margin-top: 2rem;
@@ -1129,6 +1132,9 @@ section.inter{
     }
 }
 @media (min-width: 1024px){
+    .cta{
+        padding: 3rem;
+    }
     .cta h3{
         padding-inline: 10%;
     }

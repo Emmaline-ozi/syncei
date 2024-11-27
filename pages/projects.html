@@ -30,17 +30,17 @@
 </head>
 <body>
     <div class="hero">
-        <div class="rec record">
-            <span class="rec-dot">
+        <a href="#down">
+             <div class="rec record">
+            <span class="rec-dot">               
                 <img src="/imgs/svg/alt-angles.svg" alt=" record">
                 <div class="dot"></div>
             </span>
         </div>
+        </a>
+       
         <div class="img-holder">
             <img src="/imgs/service3.jpg" alt="Our Office Setting">
-            <!-- <div class="header">
-                <h1>NAV BAR</h1>
-            </div> -->
             <div class="hold upper">
                 <h2>
                     launching products that scale
@@ -73,14 +73,13 @@
                 <rect x="0.5" y="0.5" width="39" height="55" rx="19.5" stroke="white"/>
                 <path d="M20 37V19M24 33L20 37L24 33ZM20 37L16 33L20 37Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
-            <p> scroll to see more</p>
+            </a>             
+         <a href="#down"> scroll to see more</a>                                             
         </div>
-    </div>
+   </div>
    
 
     <div class="content" id="down">
-     
           <h1 class="intro pop">
             OUR 
             <img src="/logos/star1.svg" alt="star"> 
@@ -194,19 +193,117 @@
                         </footer>
                     </figcaption>
                 </figure>
-
             </div>
         </section>
- 
-
     </div>
+
+    <section class="brief">
+      
+        <h2 class="pop">
+            Over the years we have made some beautiful masterpieces, both collectively and individually with our team. Browse through to get ideas, and envision things the way we do. 
+        </h2>      
+       
+        <div class="brief-footer">
+            <video src="/videos/m5.mp4" poster="/imgs/resized-p/interior-2.jpg" controls loop playsline> OOps————</video>
+            <p>Our Award Winning Render from the Galeria  & Arena 2024</p>
+        </div>
+
+        
+    </section>
+
+    <section class="gallery">
+
+        <div class="header-explore">
+            <h1 id="gallery">
+                Explore Our Craft
+            </h1>
+            <div class="filter-wrapper">
+                <div class="snap activated">
+                    <button class="filter active" data-filter="all">ALL</button>
+                    <button class="filter" data-filter="motion">Motion & illustration</button>
+                    <button class="filter" data-filter="brand">Branding</button>
+                    <button class="filter" data-filter="render">3D Render</button>
+                    <button class="filter" data-filter="interior">Interior Render</button>
+                    <button class="filter" data-filter="product">Product Design</button>
+                    <button class="filter" data-filter="image">Images</button>
+                    <button class="filter" data-filter="video">Videos</button>
+                </div>
+            </div>
+        </div>
+                            
+        <div class="gallery-items">
+                            <!-- images -->
+                            <!-- render -->
+            <div class="gallery-item image render" data-description="From our collection"><img src="/imgs/resized-p/render-1.jpg" alt="Rendered picture" loading="lazy"></div>
+            <div class="gallery-item image render" data-description="From our collection"><img src="/imgs/resized-p/render-2.jpg" alt="Rendered picture" loading="lazy"></div>           
+            <div class="gallery-item image render" data-description="From our collection"><img src="/imgs/resized-p/interior-1.jpg" alt="Rendered picture" loading="lazy"></div>           
+            <div class="gallery-item image render" data-description="From our collection"><img src="/imgs/resized-p/interior-2.jpg" alt="Rendered picture" loading="lazy"></div>
+                           
+                            <!--brand  -->
+            <div class="gallery-item image brand" data-description="From our collection"><img src="/imgs/resized-p/branding-1.jpg" alt="Branding Design" loading="lazy"></div>
+            <div class="gallery-item image brand" data-description="From our collection"><img src="/imgs/resized-p/branding-1.jpg" alt="Branding Design" loading="lazy"></div>
+            <div class="gallery-item image brand" data-description="From our collection"><img src="/imgs/resized-p/branding-1.jpg" alt="Branding Design" loading="lazy"></div>
+            <div class="gallery-item image brand" data-description="From our collection"><img src="/imgs/resized-p/branding-1.jpg" alt="Branding Design" loading="lazy"></div>
+                            
+                            <!-- motion -->
+            <div class="gallery-item image motion" data-description="From our collection"></div>
+                           
+                            <!-- interior -->
+            <div class="gallery-item image interior" data-description="From our collection"></div>
+                           
+                                <!-- product -->
+            <div class="gallery-item image interior" data-description="From our collection"></div>
+                            
+            <div class="gallery-item image interior" data-description="From our collection"></div>
+
+                        <!-- videos -->
+                        <!-- render -->
+            <div class="gallery-item video render" data-description="From our collection">
+                <div class="play-button"><video loop muted>
+                        <source src="/videos/m5.mp4" type="video/mp4">your browser does not support this file format
+                    </video>
+                </div>
+            </div>
+                            <!--brand  -->
+            <div class="gallery-item video" data-description="From our collection"></div>
+                            <!-- motion -->
+            <div class="gallery-item video" data-description="From our collection"></div>
+                            <!-- interior -->
+            <div class="gallery-item video" data-description="From our collection"></div>
+                            <!-- product -->
+            <div class="gallery-item video" data-description="From our collection"></div>
+                        
+            <div class="gallery-item video" data-description="From our collection"></div>
+
+             <!-- end  of gallery--> 
+        </div>   
+        <!-- end -->
+    </section>
+
+          <!-- picture modal -->
+          <div id="picModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="modal-pic-close">&times;</span>
+                <img  id="modal-image" src="" alt="from our collection">
+                <p id="modal-image-description"></p>
+            </div>
+        </div>
+
+         <!-- videos modal -->
+         <div id="vidModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="modal-vid-close">&times;</span>
+                <video src="" id="modal-video" controls loop></video>
+                <p id="modal-video-description"></p>
+            </div>
+        </div>
+
 
   
     
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>   
     <script src="/scripts/projects.js"></script>    
 </body>
 </html>

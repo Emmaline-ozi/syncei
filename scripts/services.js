@@ -34,28 +34,31 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  const entries = document.querySelectorAll('.entry');
 
-    gsap.matchMedia().add("(min-width: 769px)", () => {
-        // Animation for larger screens
-        entries.forEach(entry => {
-          let entryText = entry.querySelector('.entry__left');
-          let entryMedia = entry.querySelector('.entry__right'); 
-      
-          let tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: entry, 
-              start: 'top bottom',
-              end: 'bottom 90%',
-              scrub: true,
-            }
-          });
-      
-          // Default animation parameters for larger screens
-          tl.fromTo(entryText, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
-          tl.fromTo(entryMedia, { xPercent: 100, opacity: 0 }, { xPercent: 0, opacity: 1 }, '<');
-        });
+  gsap.matchMedia().add("(min-width: 768px)", () => {
+    // Animation for larger screens
+    entries.forEach(entry => {
+      let entryText = entry.querySelector('.entry__left');
+      let entryMedia = entry.querySelector('.entry__right'); 
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: entry, 
+          start: 'top bottom',
+          end: 'bottom 90%',
+          scrub: true,
+          ease: "ease-in-out",
+        }
       });
-     
+  
+      // Default animation parameters for larger screens
+      tl.fromTo(entryText, { xPercent: -60, opacity: 0 }, { xPercent: 0, opacity: 1 });
+      tl.fromTo(entryMedia, { xPercent: 60, opacity: 0 }, { xPercent: 0, opacity: 1 }, '<');
+    });
+  });
+
+
 });
 
 // accordion

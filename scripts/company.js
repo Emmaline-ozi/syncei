@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.utils.toArray(".about-wrapper").forEach((card) => {     
         gsap.fromTo(card, 
           {
-            y: 60,
+            y: 30,
           },
           {
             y: 0, 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
               start: "top 85%",  
               end: "top top",    
               scrub: true,   
-              markers: false,      
+              markers: true,      
             },
             ease: "ease-in-out",  
           });
