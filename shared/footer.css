@@ -1,6 +1,5 @@
 .ft{
-    position: sticky;
-    top: 0;
+
     min-height: 100vh;
     min-height: 100dvh;
    background-color: plum;
@@ -34,6 +33,11 @@
 .grid-ft h2{
     font-weight: 600;
     font-size: 1.5rem;
+}
+.ft-logo img{
+    width: 100px;
+    cursor: -webkit-pointer;
+    cursor: pointer;
 }
 
 .cta-footer p{

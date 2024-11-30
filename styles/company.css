@@ -3,16 +3,10 @@
 --accent-color:#d890f9;
 --secondary-color:#dddbff;
 --linearPrimarySecondary: linear-gradient(#000000, #dddbff);
-
---linearPrimaryAccent: linear-gradient(#000000, #d890f9);
-
 --linearSecondaryAccent: linear-gradient(#dddbff, #d890f9);
 --webkit-secondaryAccent:  -webkit-gradient(linear, left top, left bottom, from(#dddbff), to(#d890f9));
-
 --radialPrimarySecondary: radial-gradient(#000000, #dddbff);
-
 --radialPrimaryAccent: radial-gradient(#000000, #d890f9);
-
 --radialSecondaryAccent: radial-gradient(#dddbff, #d890f9);
 
 /* button cta */
@@ -48,6 +42,42 @@ body{
     background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
     background-attachment: fixed;
 }
+/* backgrounds */
+.backit_black{
+    z-index: -2;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/backgrounds/dense-acc-specsm.svg);
+    background-attachment: scroll; 
+    background-size: fill;
+}
+@media(max-width:768px){
+    .backit_black{
+        background: url(/imgs/backgrounds/burn.svg);
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+.blur{
+  z-index: -2;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+
+.back_white{
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .hero-company{
     width: 100%;
@@ -58,7 +88,6 @@ body{
    padding-inline: 5%;
    margin-bottom: .5rem;
 }
-
 .hero-company .intro h1{
     font-weight: 700;
     margin-bottom: .5rem;
@@ -154,9 +183,11 @@ body{
     .btn_wrapper{
         display: block;
         z-index: 100;
+        -webkit-cursor: pointer;
         cursor: pointer;
     }
     .btn_wrapper button{
+        background: var(--accent-color);
         z-index: 100;
         position: relative;
         border-radius: 50%;
@@ -171,8 +202,11 @@ body{
         align-items: center;
         width: 100px;
         height: 100px;
+        -webkit-transition: -webkit-transform .4s ease-in-out;
+        transition: -webkit-transform .4s ease-in-out;
+        -o-transition: transform .4s ease-in-out;
         transition: transform .4s ease-in-out;
-        background: var(--accent-color);
+        transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;       
     }
     .btn_wrapper button:hover {
         -webkit-transform:scale(1.1);
@@ -222,7 +256,6 @@ body{
         line-height: 2em;
     }
 }
-
 /* ==LOGOS== */
 @-webkit-keyframes slide {
     from {
@@ -338,6 +371,8 @@ body{
 .about-comp{
     margin-top: .5rem;
     padding-bottom: 5rem;
+    display: -webkit-grid;
+    display: -ms-grid;
     display: grid;
     gap: 2rem;
 }
@@ -346,10 +381,19 @@ body{
     background-color: hsla(0, 0%, 100%, 0.26);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
     padding: 1%;
     -webkit-transform: translatey(60px);
     -ms-transform: translatey(60px);
@@ -400,10 +444,7 @@ body{
     padding-bottom: 7rem;
     overflow-x: hidden;
     position: relative;
-    background: url(/imgs/backgrounds/dense-acc-specsm.svg);
-    background-size: fill;
 }
-
 .abt-hd{
     display: -webkit-grid;
     display: -ms-grid;
@@ -466,9 +507,9 @@ body{
     height: .12em;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    -webkit-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    -webkit-transition: width .4s ease-in-out,  border .4s ease-in-out;
+    -o-transition: width .4s ease-in-out,  border .4s ease-in-out;
+    transition: width .4s ease-in-out, border .4s ease-in-out;
     background-color: var(--secondary-color);
 }
 @media(min-width: 768px){
@@ -483,9 +524,10 @@ body{
     display: -ms-grid;
     display: grid;
     gap: 2rem;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: height .3s ease-in-out;
+    -o-transition: height .3s ease-in-out;
+    transition: height .3s ease-in-out;
+
 }
 .dsp-inner{
    opacity: .5;
@@ -600,7 +642,6 @@ body{
     overflow: visible;
     line-height: 0;
 }
-/* change height to get desired effect */
 .custom-shape-divider-top svg {
     position: relative;
     display: block;
@@ -660,6 +701,7 @@ body{
     color: #000;
     border-radius: 2rem;
     border: 2px solid #D9D9D9;
+    -webkit-cursor: pointer;
     cursor: pointer;
     height: auto; 
     display: -webkit-box;
@@ -685,11 +727,10 @@ body{
 .team-flex-wrap .card:hover {
     border-color: var(--secondary-color);
 }
+
 .team-flex-wrap .card:hover .mask {
     opacity: 1;
-    background: #d890f915;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(20px);
+    background-color: #d890f915; 
 }
 .team-flex-wrap .card:hover .top {
     height: unset;
@@ -721,9 +762,11 @@ body{
     top: 0;
     left: 0;
     opacity: 0;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(20px);
+    -webkit-transition: opacity 0.3s, background-color 0.3s;
+    -o-transition: opacity 0.3s, background-color 0.3s;
+    transition: opacity 0.3s, background-color 0.3s;
     border-radius: 20px;
 }
 .team-flex-wrap .card .top {
@@ -741,15 +784,16 @@ body{
   }
   .team-flex-wrap .card .top .img-wrap {
     width: 100%;
-    height: 250px;
+    /* height: 250px; */
     height: 15rem;
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: width 0.3s, height 0.3s, border-radius 0.3s, background-color 0.3s;
+    -o-transition: width 0.3s, height 0.3s, border-radius 0.3s, background-color 0.3s;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s, background-color 0.3s;
   }
+
   .team-flex-wrap .card .top .img-wrap img {
     width: 100%;
     height: 100%;
@@ -884,23 +928,158 @@ body{
         grid-auto-columns: 35%;
         gap: 5rem;
     }
-    .team-flex-wrap .card:first-of-type{
-       
-    }
     .team-flex-wrap .card .bottom{
         padding-left: 2.5rem;
     } 
 }
 .team-flex-wrap .card:last-of-type{
-    border-radius: 50%;
-    border: transparent;
+    position: relative;
+    padding-inline: .5em;
     display: -webkit-grid;
     display: -ms-grid;
     display: grid;
+    gap: 1.5rem;
     place-content: center;
-    background: none;
-    backdrop-filter: unset;
+    background: unset;
  }
+ .team-flex-wrap .card:last-of-type h4{
+    font-size: 1.5rem;
+    text-align: center;
+ }
+ .team-flex-wrap .card:last-of-type a{
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: .5em;
+    border-radius: .5em;
+    text-transform: uppercase;
+    -webkit-transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+.team-flex-wrap .card:last-of-type a:active,
+.team-flex-wrap .card:last-of-type a:hover{
+    background-color: white;
+    color: black;
+ }
+ .team-flex-wrap .card:last-of-type img{
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    opacity: .2;
+    z-index: -1;
+ }
+ @media (min-width: 768px){
+    .team-flex-wrap .card:last-of-type h4{
+        font-size: 2rem;
+     }
+ }
+ /* hire us */
+.hire{
+    height: 50vh;
+    height: 50dvh;
+    padding-block: 2rem;
+    margin-bottom: 3rem;
+}
+.hire .card{
+    border: 3px solid var(--secondary-color);
+    border-radius: 1rem;
+    background-color: #ffffff67;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    padding-inline: .5em;
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
+    gap: 1.5rem;
+    place-content: center;
+    overflow: hidden;
+}
+
+.hire .card h4{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.hire .card a{
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: .5em;
+    border-radius: .5em;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    -webkit-transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+.hire .card a:active,
+.hire .card a:hover{
+   background-color: white;
+   color: black;
+}
+.hire img{
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+@media (max-width: 768px){
+    .hire img{
+        -webkit-transform: scale(1.5);
+         -ms-transform: scale(1.5);
+             transform: scale(1.5);
+    }
+}
+@media (min-width: 768px){
+    .hire .card{
+        width: 50%;
+        
+    }
+    .hire .card h4{
+        font-size: 2rem;
+     }
+     .hire .card img{
+        bottom: -60px;
+     }
+ }
+ .divider-middle-bottom{
+    position: relative;
+    min-height: 17vh;
+    min-height: 17dvh;
+    z-index: -1;
+    overflow: visible;
+}
+ .custom-shape-divider-bottom{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: visible;
+    line-height: 0; 
+
+}
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #000000;
+}
 
  /* testimonials */
 .testimonials{
@@ -911,15 +1090,11 @@ body{
     min-height: -moz-max-content;
     min-height: max-content;
     border-top: 1px solid black;
-    border-top-left-radius: 30rem;
-    border-top-right-radius: 30rem;
     background-color: black;
     padding-bottom: 3.5rem;
 }
 .testimonials h2{
     color: white;
-    text-decoration: underline;
-    text-underline-offset: 10px;
     font-weight: 500;
     text-align: center;
     margin-top: 2rem;
@@ -956,7 +1131,7 @@ body{
     row-gap: 1rem;
     border: 3px solid #ddd;
     border-radius: 1rem;
-    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg), rgb(255, 255, 255);
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1046,11 +1221,14 @@ body{
 .bottom-test{
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -1px;
     z-index: 3;
 }
 .bottom-test svg{
     display: block;
+    opacity: .6;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
     transform: rotate(270deg);
 }
 
@@ -1061,10 +1239,15 @@ body{
     padding-bottom: 3rem;
 }
 .divider-faq{
+    position: absolute;
+    top: 0;
+    left: -1px;
     z-index: 3;
-    width: 100%;
-    height: 20dvh;
-   
+    width: 100%;  
+}
+.divider-faq svg{
+    opacity: .6;
+    display: block;
 }
 .spacer-faq{
     height: 5rem;
@@ -1091,12 +1274,12 @@ body{
     margin-bottom: 1rem;
 }
 .faqs .accordion{
+    -webkit-cursor: pointer;
     cursor: pointer;
     text-align: left;
     font-weight: 300;
     padding: .5rem;
     width: 100%;
-    /* PEGGGGGGGGGGGGGGGGGGGGG */
     -webkit-transition: border 0.4s ease-in-out,background-color 0.4s ease-in-out;
     -o-transition: border 0.4s ease-in-out,background-color 0.4s ease-in-out;
     transition: border 0.4s ease-in-out,background-color 0.4s ease-in-out;
@@ -1145,81 +1328,4 @@ body{
         padding: 1rem 1rem 1rem 2.5rem;
     }
 }
-.divider{
-    background-color: transparent;
-}
 
-/* reach */
-.reach{
-    padding: 1rem;
-}
-
-
-/* backgrounds */
-
-.backit_black{
-    z-index: -2;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: url(/imgs/backgrounds/dense-acc-specsm.svg);
-    background-attachment: scroll; 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-@media(max-width:768px){
-    .backit_black{
-        background: url(/imgs/backgrounds/burn.svg);
-        background-attachment: scroll;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-
-}
-.blur{
-  z-index: -2;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(24px);
-}
-.m{
-    background: linear-gradient(2deg, #000000, #af43f8, #000000);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -o-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:99% 0%}
-    50%{background-position:2% 100%}
-    100%{background-position:99% 0%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:99% 0%}
-    50%{background-position:2% 100%}
-    100%{background-position:99% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:99% 0%}
-    50%{background-position:2% 100%}
-    100%{background-position:99% 0%}
-}
-.more{
-    /* border-bottom-left-radius:  5%;
-    border-bottom-right-radius: 10%; */
-    /* clip-path: path("M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"); */
-    /* clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 75% 95%, 50% 90%, 25% 95%, 0% 90%); */
-   
-}
-.back_white{
-    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}

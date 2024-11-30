@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.utils.toArray(".about-wrapper").forEach((card) => {     
         gsap.fromTo(card, 
           {
-            y: 30,
+            y: 60,
           },
           {
             y: 0, 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
               start: "top 85%",  
               end: "top top",    
               scrub: true,   
-              markers: true,      
+              markers: false,      
             },
             ease: "ease-in-out",  
           });
@@ -135,14 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.matchMedia().add("(max-width: 1023px)", () => {
         gsap.to(cards, {
-            xPercent: -100 * (cards.length - 1.5) ,
+            xPercent: -100 * (cards.length + .5) ,
             scrollTrigger:{
                 trigger:".team-flex-wrap",
-                start:"top 5%",
+                start:"top 15%",
                 pin:true,
                 ease: "ease-in-out",
                 scrub: true,
-                markers: true,
+                markers: false,
             }
         })
     });
@@ -161,6 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
          
 });
+
+
  
 // testimonials
 const container = document.querySelector('#slider');

@@ -6,14 +6,14 @@
 }
 *{
     margin: 0;
-    padding: 0;   
+    padding: 0; 
+    /* border: 1px solid black;   */
 }
 
 /* Remove default margin and padding */
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
-    font-weight: normal;
 }
 body{
     font-family: "Quattrocento Sans", sans-serif;
@@ -45,14 +45,15 @@ h3{
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /*  -webkit-overflow-scrolling: touch;  */
 }
-/*  -webkit-overflow-scrolling: touch;  */
+
 
 /* Basic styles for buttons and inputs */
 button, input, textarea, select {
-    font: inherit; /* Ensure font inheritance */
-    -webkit-appearance: none; /* Remove native styling on Safari */
-    -moz-appearance: none; /* Remove native styling on Firefox */
+    font: inherit; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     border: none;
     outline: none;
@@ -72,8 +73,7 @@ a{
 img {
     display: block;
     max-width: 100%;
-    height: auto;
-    -webkit-user-drag: none; /* Prevent image dragging in Safari */
+    -webkit-user-drag: none; 
 }
 video {
     display: block; 
@@ -84,24 +84,19 @@ video {
     background-color: transparent; 
   }
   
-
 /* General button reset */
 button {
-    -webkit-appearance: none;  /* Remove default appearance in Safari */
-    -moz-appearance: none;     /* Remove default appearance in Firefox */
-    appearance: none;          /* Ensure it's removed for all browsers */
-    /* Reset button border, background, and padding */
-    border: 2px solid transparent; /* Set a transparent border initially */
-    background: transparent;      /* Remove background styling */
-    /* padding: 10px 20px;           Standard padding */
-    /* font-size: 16px;              Standard font size */
-    font-family: inherit;         /* Inherit font family */
-    color: inherit;               /* Inherit text color */
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;          
+    border: 1px solid transparent; 
+    background: transparent;      
+    font-family: inherit;         
+    color: inherit;               
     -webkit-cursor: pointer;
-    cursor: pointer;             /* Pointer cursor on hover */
-    text-align: center;           /* Ensure text is centered */
-    /* border-radius: 5px;           Optional: Rounded corners */
-    outline: none;                /* Remove outline to customize focus */
+    cursor: pointer;             
+    text-align: center;           
+    outline: none;              
 }
 
 /* Optional: Button hover effects */
@@ -178,22 +173,7 @@ textarea
     color: #d890f9;
 }
 
-/* safari resets */
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-}
 
-.grid-container {
-    display: -webkit-grid;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 10px;
-}
 /* using transform */
 .animated-element {
     transform: translateX(10px);
@@ -222,5 +202,10 @@ select {
 .custom-cursor {
     cursor: pointer;
     -webkit-cursor: pointer;
+
+
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
 }
 

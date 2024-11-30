@@ -1,246 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/shared/reset.css">
+    <link rel="stylesheet" href="/shared/nav.css">
+    <title>nav improved</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav stretch" id="navbar">
+            <div class="upper">
+                <a href="#" class="left-side">
+                    <img src="/logos/footer-logo2.svg" alt="logo" height="30">
+                </a>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="/shared/assets/css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
-        <title>Responsive navigation bar - Bedimcode</title>
-
-        <!--=============== HEADER ===============-->
-        <header class="header">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="#" class="nav__logo">
-                        <i class="ri-code-s-slash-line"></i> CodeBox
-                    </a>
-    
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line nav__toggle-menu"></i>
-                        <i class="ri-close-line nav__toggle-close"></i>
+                <div class="toggler">
+                    <div class="action has-submenu">                     
+                            <img src="/imgs/svg/icons/command.svg" alt="" height="20">                      
+                        <ul>
+                            <li><a href="">Call</a></li>
+                            <li><a href="">Mail</a></li>
+                            <li><a href="">Socials</a></li>
+                        </ul>
                     </div>
-                </div>
+                    <div>                      
+                        <button class="hamburger" id="menu-button">
+                            <svg width="30" height="30" viewBox="0 0 32 32">
+                                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                                <path class="line" d="M7 16 27 16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>    
+            </div>
+            <div class="dropdown" id="dropdown">
+                <ul class="list">
+                    <li class="lone">
+                        <a href="#" class="nav-link first">Home</a>
+                    </li>
+                    <li class="has-submenu" id="has-submenu">
+                        <a href="#" class="nav-link">Services</a>
+                        <span>
+                            <svg width="20" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z" stroke-width="4" fill="black"/>
+                            </svg>                                
+                        </span>
+                        <ul id="sub-menu">
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu" id="has-submenu">
+                        <a href="#" class="nav-link">Company</a>
+                        <span>
+                            <svg width="20" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z" stroke-width="4" fill="black"/>
+                            </svg>                                
+                        </span>
+                        <ul id="sub-menu">
+                            <li><a href="#">About US</a></li>
+                            <li><a href="#">Team & Advisors</a></li>
+                            <li><a href="#">Faqs</a></li>
+                            <li><a href="#">Work With US</a></li>
+                            <li><a href="#">Customer Care</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu" id="has-submenu">
+                        <a href="#" class="nav-link">Projects</a>
+                        <span>
+                            <svg width="20" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z" stroke-width="4" fill="black"/>
+                            </svg>                                
+                        </span>
+                        <ul id="sub-menu">
+                            <li><a href="#">Awards</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <li class="lone">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <a href="#" class="nav-cta">Start a Project</a>
+            </div>
+        </nav>
+    </header>
 
-                <!--=============== NAV MENU ===============-->
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="#" class="nav__link">Home</a>
-                        </li>
-
-                        <!--=============== DROPDOWN 1 ===============-->
-                        <li class="dropdown__item">                      
-                            <div class="nav__link dropdown__button">
-                                Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-flashlight-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Most viewed courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">HTML for beginners</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Advanced CSS</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">JavaScript OOP</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-heart-3-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Popular courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Development with Flutter</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web development with React</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Backend development expert</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-book-mark-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Careers</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web development</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Applications development</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">UI/UX design</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Informatic security</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-file-paper-2-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Certifications</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Course certificates</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Free certifications</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--=============== DROPDOWN 2 ===============-->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-code-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Web templates</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Free templates</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Premium templates</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-pen-nib-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Designs</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web designs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">App designs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Component design</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-apps-2-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Others</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Recent blogs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Tutorial videos</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Webinar</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#" class="nav__link">Pricing</a>
-                        </li>
-
-                        <!--=============== DROPDOWN 3 ===============-->
-                        <li class="dropdown__item">                        
-                            <div class="nav__link dropdown__button">
-                                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-community-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">About us</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">About us</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Support</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Contact us</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-shield-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Safety and quality</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Cookie settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Privacy Policy</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        
-        <!--=============== MAIN JS ===============-->
-        <script src="/shared/assets/js/main.js"></script>
+<script src="/shared/nav.js"></script>
+</body>
+</html>

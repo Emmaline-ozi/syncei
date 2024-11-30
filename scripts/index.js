@@ -7,56 +7,51 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-    document.addEventListener("DOMContentLoaded", () => {
-           // Default animation settings (for desktop)
 
-            gsap.to(".letters", 2, {
-                top: "20",
-                ease: "power3.inOut",
-                delay: 2,
-            });
-        
-
-            gsap.to(".top-left", 2, {
-                left: "0",
-                ease: "power3.inOut",
-                delay: 4,
-            });
-            gsap.to(".bottom-right", 2, {
-                y: 100,
-                ease: "power3.inOut",
-                delay: 3,
-            });
-
-            gsap.to(".go-right", 2, {
-                right: "0",
-                ease: "power3.inOut",
-                delay: 4,
-            });
-
-            gsap.to(".block-left", 2, {
-                left: "-50%",
-                ease: "power3.inOut",
-                delay: 4,
-            });
-
-            gsap.to(".block-right", 2, {
-                right: "-50%",
-                ease: "power3.inOut",
-                delay: 4,
-            });
-            gsap.to(".slide-right", 2, {
-                x: 0,
-                ease: "power3.inOut",
-                delay: 4,
-            });
+gsap.to(".letters", 2, {
+    top: "20",
+    ease: "power3.inOut",
+    delay: 2,
 });
 
+
+gsap.to(".top-left", 2, {
+    left: "0",
+    ease: "power3.inOut",
+    delay: 4,
+});
+gsap.to(".bottom-right", 2, {
+    y: 100,
+    ease: "power3.inOut",
+    delay: 3,
+});
+
+gsap.to(".go-right", 2, {
+    right: "0",
+    ease: "power3.inOut",
+    delay: 4,
+});
+
+gsap.to(".block-left", 2, {
+    left: "-50%",
+    ease: "power3.inOut",
+    delay: 4,
+});
+
+gsap.to(".block-right", 2, {
+    right: "-50%",
+    ease: "power3.inOut",
+    delay: 4,
+});
+gsap.to(".slide-right", 2, {
+    x: 0,
+    ease: "power3.inOut",
+    delay: 4,
+});
 
 
 // testimonials
 const container = document.querySelector('#slider');
-
 let isDown = false;
 let startX;
 let scrollLeft;
