@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/shared/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/shared/reset.css">
+    <link rel="stylesheet" href="/shared/nav.css">
     <link rel="stylesheet" href="/styles/projects.css">
     <link rel="stylesheet" href="/shared/footer.css">
     <!-- Favicon for browser tabs (standard sizes) -->
@@ -29,6 +28,90 @@
     <title>Projects</title>
 </head>
 <body>
+    <div id="page-content">
+    <header class="header-nav">
+        <nav class="nav stretch navigation" id="navbar">
+            <div class="upper-nav">
+                <a href="#" class="left-side-nav">
+                    <img src="/logos/footer-logo2.svg" alt="logo" height="30">
+                </a>
+
+                <div class="toggler">
+                    <div class="action has-submenu">                     
+                            <img src="/imgs/svg/icons/command.svg" alt="" height="20">                      
+                        <ul>
+                            <li><a href="">Call</a></li>
+                            <li><a href="">Mail</a></li>
+                            <li><a href="">Socials</a></li>
+                        </ul>
+                    </div>
+                    <div>                      
+                        <button class="hamburger" id="menu-button">
+                            <svg width="30" height="30" viewBox="0 0 32 32">
+                                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                                <path class="line" d="M7 16 27 16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>    
+            </div>
+            <div class="dropdown" id="dropdown">
+                <ul class="list">
+                    <li class="lone">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="has-submenu" id="has-submenu">
+                        <a href="#" class="nav-link">Services</a>
+                        <span>
+                            <svg width="20" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z" stroke-width="4" fill="black"/>
+                            </svg>                                
+                        </span>
+                        <ul id="sub-menu">
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Solutions</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu" id="has-submenu">
+                        <a href="#" class="nav-link">Company</a>
+                        <span>
+                            <svg width="20" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z" stroke-width="4" fill="black"/>
+                            </svg>                                
+                        </span>
+                        <ul id="sub-menu">
+                            <li><a href="#">About US</a></li>
+                            <li><a href="#">Team & Advisors</a></li>
+                            <li><a href="#">Faqs</a></li>
+                            <li><a href="#">Work With US</a></li>
+                            <li><a href="#">Customer Care</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu" id="has-submenu">
+                        <a href="#" class="nav-link">Projects</a>
+                        <span>
+                            <svg width="20" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z" stroke-width="4" fill="black"/>
+                            </svg>                                
+                        </span>
+                        <ul id="sub-menu">
+                            <li><a href="#">Awards</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <li class="lone">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <a href="#" class="nav-cta">Start a Project</a>
+            </div>
+        </nav>
+    </header>
+   
     <div class="hero">
         <a href="#down">
              <div class="rec record">
@@ -41,7 +124,7 @@
        
         <div class="img-holder">
             <img src="/imgs/resized-p/service3.jpg" alt="Our Office Setting">
-            <div class="hold upper">
+            <div class="hold upper-hero">
                 <h2>
                     launching products that scale
                 </h2>
@@ -74,7 +157,7 @@
                 <path d="M20 37V19M24 33L20 37L24 33ZM20 37L16 33L20 37Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>             
-         <a href="#down"> scroll to see more</a>                                             
+         <a href="#down" class="smre"> scroll to see more</a>                                             
         </div>
    </div>
    
@@ -297,10 +380,10 @@
                 <p id="modal-video-description"></p>
             </div>
         </div>
-
+    </div>
 
   
-    
+    <script src="/shared/nav.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>   

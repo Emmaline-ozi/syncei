@@ -127,6 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
    });
 
 });
+
+const teamCard = document.querySelectorAll('#card');
+  teamCard.forEach((card) => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('clicked');
+    });
+  });
   
     // team
 document.addEventListener("DOMContentLoaded", () => {

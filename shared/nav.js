@@ -45,25 +45,41 @@ const toggleItem = (menu) => {
         menu.classList.add('grow');
     }
 }
-// =========== DISAPPEAR ON SCROLL=======\\
+
+// // =========== DISAPPEAR ON SCROLL=======\\
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    var triggerPoint = document.documentElement.scrollHeight * 0.2; // 20% of page height
+  var currentScrollPos = window.pageYOffset;
+  var triggerPoint = document.documentElement.scrollHeight * 0.2; // 20% of page height
 
-    if (window.pageYOffset > triggerPoint) {
-        // Only start hiding/showing navigation after scrolling down 50% of the page
-        if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navigations").style.top = "0";
-        } else {
-        document.getElementById("navigations").style.top = "-100px";
-        }
+  if (window.pageYOffset > triggerPoint) {
+    // Only start hiding/showing navigation after scrolling down a percentage of the page
+    if (prevScrollpos > currentScrollPos) {
+      document.querySelector("#navigate").style.top = "0";
     } else {
-        // Reset navigation position when above 50%
-        document.getElementById("navigations").style.top = "0";
+      document.querySelector("#navigate").style.top = "-100px";
     }
+  } else {
+    // Reset navigation position
+    document.querySelector("#navigate").style.top = "0";
+  }
 
-    prevScrollpos = currentScrollPos;
+  prevScrollpos = currentScrollPos;
 };
+
+// preloader
+// const loaderContainer = document.querySelector('.loader-container');
+// const pageContent = document.querySelector('#page-content'); 
+// document.body.classList.add('no-scroll');
+// window.addEventListener('load', () => {
+//   setTimeout(() => {
+//     loaderContainer.classList.add('away');
+//       setTimeout(() => {
+//         pageContent.classList.add('shown');
+//         document.body.classList.remove('no-scroll');
+//       }, 500);
+//   }, 3000);
+// });
+

@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
             gsap.matchMedia().add("(max-width: 1113px)", () => {
-              gsap.fromTo( ".upper", 
+              gsap.fromTo( ".upper-hero", 
                 {
                   xPercent: -100,
                   opacity: 0,
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
             gsap.matchMedia().add("(min-width: 1114px)", () => {
-              gsap.fromTo( ".upper", 
+              gsap.fromTo( ".upper-hero", 
                 {
                   xPercent: 200,
                 },

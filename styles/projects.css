@@ -213,11 +213,13 @@ body{
         -webkit-text-decoration-color: #ae00ff;
                 text-decoration-color: #ae00ff;
         color: black;
-        stroke: purple;
+        stroke: var(--accent-color);
+        stroke-width: .3rem; 
     }
 }
   
 .down{
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -237,7 +239,7 @@ body{
         justify-content: center;
     gap: 1rem;
 }
-.down a{
+.down .smre {
     display: inline;
     font-weight: 300;
     color: gray;
@@ -249,11 +251,10 @@ body{
 }
 
 #scroll-icon rect {
-    -webkit-animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
-    animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
+    stroke: purple;
 }
 #scroll-icon path{
-    stroke: var(--accent-color);
+    stroke: purple;
     stroke-width: .1rem; 
     -webkit-animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
     animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
@@ -727,6 +728,7 @@ body{
     display: block;
     border-radius: 5px;
     border: 1px solid black;
+    -webkit-box-shadow: 0 0 10px 1px black; 
     box-shadow: 0 0 10px 1px black;
   
 }

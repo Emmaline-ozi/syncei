@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/shared/reset.css">
+    <link rel="stylesheet" href="/shared/nav.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+    <link rel="stylesheet" href="/shared/footer.css">
+    <!-- Favicon for browser tabs (standard sizes) -->
+    <link rel="icon" href="/imgs/icon/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="/imgs/icon/favicon-32.png" sizes="32x32" type="image/png">
+    
+    <!-- Larger icons for high-resolution displays and mobile devices -->
+    <link rel="icon" href="/imgs/icon/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="/imgs/icon/favicon-96.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="/imgs/icon/favicon-180.png" sizes="180x180" type="image/png">
+
+    <!-- Apple Touch Icon (specifically for iOS home screen shortcuts) -->
+    <link rel="apple-touch-icon" href="/imgs/icon/favicon-180.png" sizes="180x180">
+
+    <!-- Android Chrome icons (especially for shortcuts or PWA homescreen icons) -->
+    <link rel="icon" href="/imgs/icon/favicon-512.png" sizes="512x512" type="image/png">
+    <title>Contact</title>
+</head>
+<body>
+
+<div id="page-content">
+    <section class="container-contact">
+        <form action="" method="post" id="contact-form" enctype="multipart/form-data">
+            <hgroup id="call-us">
+                <h1>Contact US</h1>
+            </hgroup>
+
+            <div class="grid-mm">
+                <div class="pair">
+                    <input type="text" name="fname" autocomplete="on" placeholder="" autofocus required>
+                    <label for="fname">First Name</label>
+                </div>
+
+                <div class="pair">
+                    <input type="text" name="lname" placeholder="" autocomplete="on" required>
+                    <label for="lname">Last Name</label>
+                </div>
+            </div>
+
+            <div class="pair">
+                <input type="email" name="email" placeholder="" autocomplete="on" required>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="grid-mm">
+                <div class="pair">
+                    <input type="text" name="subject" placeholder="" autocomplete="on" required>
+                    <label for="subject">Subject</label>
+                </div>
+                <select name="budget" id="budget">
+                    <option disabled hidden selected>Budget</option>
+                    <option value="up to ₦100k">up to ₦100k</option>
+                    <option value="₦100k-₦150k">₦100k — ₦150k</option>
+                    <option value="more than ₦150k"> above ₦150k</option>
+                </select>
+            </div>
+
+            <div>
+                <textarea required name="message" id="message" maxlength="1000" placeholder="Send us a message"></textarea>
+                <div id="charCount" class="count">0 / 1000</div>
+            </div>
+
+            <div class="footer-contact">
+                <div>                   
+                    <div class="display-attach">
+                        <span id="file-name" class="file-name"></span>
+                        <button id="close-button" class="close-button" type="button">&times;</button>
+                        <div id="error" style="color: red;"></div>
+                    </div>
+                    <label for="attachment" class="attach">
+                        <input type="file" name="file_path" class="attachment" id="attachment" accept="image/png, image/jpeg, application/pdf, .doc, .txt">
+                        <img src="/imgs/svg/black_w_p2.svg" alt="attachment pin">
+                        <span>Attach File</span>
+                    </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LfcdHUqAAAAALz19MXHXBRQkNhxW4Dnbvk-ekAB">recaptcha</div>			 
+            </div>
+            <div class="spacer-c"></div>      
+            <div>
+                <button class="button" id="btn-submit">
+                    <span class="button--text">Send a message</span>
+                    <div class="button--loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>               
+                </button>
+            </div>
+        </form>
+        <div class="fl-right">
+            <div class="c-contact">
+                <div class="profile"><img src="/imgs/profile/p4.jpg" alt="client partner" loading="eager"></div>
+                <h4>Catherine Joan</h4>
+                <p>Client Partner</p>
+                <div class="divider-card"></div>
+                <em>It takes less than 1 mintue</em>
+                <a href="tel:+234">
+                    Whatsapp
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="location">
+        <div class="connect">
+            <h3>Let's Connect</h3>
+            <p>
+                Let's communicate! Don't hesitate to contact us with your projects, ideas, and questions.
+            </p>
+            <br>
+            <h5>Visit Us: </h5>
+            <span>               
+                <svg fill="#d890f9" height="16px" width="20px" style="display: inline; width:min-content; " version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <g>
+                                <path d="M256,0C161.899,0,85.333,76.565,85.333,170.667c0,86.869,65.28,158.635,149.333,169.195v150.805 c0,11.776,9.557,21.333,21.333,21.333s21.333-9.557,21.333-21.333V339.861c84.053-10.56,149.333-82.325,149.333-169.195 C426.667,76.565,350.101,0,256,0z M256,128c-23.531,0-42.667,19.136-42.667,42.667c0,11.776-9.557,21.333-21.333,21.333 s-21.333-9.557-21.333-21.333c0-47.061,38.272-85.333,85.333-85.333c11.776,0,21.333,9.557,21.333,21.333S267.776,128,256,128z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <strong>Lagos, Nigeria</strong>
+            </span>
+            <p> No.8 Sans-serifer Street, off playfair avenue, Interior City.</p>
+            <div class="lighter">
+                <p>Need further assistance?</p>
+                <a href="#call-us">Let's have a Talk</a>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4814848705996!2d6.709936473989812!3d6.200032493787713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1043f283fa61e5a7%3A0x30e5aaf34560924!2sNiit!5e0!3m2!1sen!2sng!4v1730787533450!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</div> 
+
+    <script>
+
+        // JavaScript to display the file name and handle file upload validations
+        const displayAttachment = document.querySelector('.display-attach');
+		const fileUpload = document.getElementById('attachment');
+		const fileNameDisplay = document.getElementById('file-name');
+		const closeButton = document.getElementById('close-button');
+		const errorDiv = document.getElementById('error');
+		const maxSizeInBytes = 20 * 1024 * 1024; // Set max size to 20 MB
+
+		fileUpload.addEventListener('change', function() {
+			const file = fileUpload.files[0]; // Get the selected file
+
+			if (file) {
+				// Display the file name and show the close button
+				displayAttachment.style.visibility = "visible";
+				fileNameDisplay.textContent = file.name;
+                closeButton.style.display = "inline";
+				// Check file size
+				if (file.size > maxSizeInBytes) {
+					errorDiv.textContent = `File size exceeds 2 MB. Please choose a smaller file.`;
+					fileUpload.value = ''; // Clear the input
+					fileNameDisplay.style.display = 'none'; // Hide file name display
+					closeButton.style.display = 'none'; // Hide close button
+				} else {
+					errorDiv.textContent = ''; // Clear any previous error messages
+				}
+			} else {
+				// Hide the file name and close button if no file is selected
+				fileNameDisplay.style.display = 'none';
+				closeButton.style.display = 'none';
+			}
+		});
+
+
+		// Clear file input and hide close button when 'X' is clicked
+		closeButton.addEventListener('click', function() {
+			fileUpload.value = ''; // Clear the file input
+			fileNameDisplay.textContent = 'No file chosen';
+			closeButton.style.display = 'none'; // Hide the close button
+		});
+
+		// textarea
+		const textarea = document.getElementById('message');
+		const charCount = document.getElementById('charCount');
+		const maxLength = textarea.getAttribute('maxlength');
+
+		textarea.addEventListener('input', function() {
+			this.style.height = 'auto'; // Reset height
+			this.style.height = (this.scrollHeight) + 'px'; // Set new height
+			const currentLength = this.value.length; // Get current length of textarea value
+			charCount.textContent = `${currentLength} / ${maxLength}`; // Update counter text
+		});
+
+        // form submition
+       const submitButton = document.querySelector('#btn-submit');
+		const submitButtonText = document.querySelector('#btn-submit .button--text');
+		const form = document.querySelector('#contact-form');
+		const formElements = form.querySelectorAll('input, button, select, textarea'); 
+
+        // form validity function
+		function validForm(){
+			return form.checkValidity();
+		}
+
+        // diable elements in form during loading state
+		function disableForm(){
+			formElements.forEach(element => {
+				element.disabled = true;
+			})
+		}
+
+        // enable elements in form after loading state
+		function enableForm(){
+			formElements.forEach(element => {
+				element.disabled = false;
+			})
+		}
+
+        submitButton.addEventListener('click', (e) => {
+            // if the input is not valid break
+			if(!validForm()){
+				return;
+			}
+             //e is event; this stops the default action of the button
+			e.preventDefault();
+
+            disableForm(); //disable entire form
+
+            // add the loading class
+			submitButton.classList.add('loading');
+
+            // set a timer for 4s (like a delay that will wait for the animation to finish then removes it)
+            setTimeout(() => {
+                //remove the loading class
+                submitButton.classList.remove('loading');
+                submitButton.classList.add('success');
+                
+                //change the text in button
+                submitButtonText.innerHTML = 'Submitted';
+
+                //set a delay to form submition
+                setTimeout(() => {
+                    //manually submit the form
+                    form.submit();
+                }, 1000);
+                
+            }, 5000);
+        });
+
+    </script>
+     <script src="/shared/nav.js"></script>
+</body>
+</html>

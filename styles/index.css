@@ -432,6 +432,7 @@ section.inter{
         height: 3rem;
     }
     .learn-more .circle:active {
+        -webkit-box-shadow: 0 0 10px var(--accent-color); 
        box-shadow: 0 0 10px var(--accent-color);
     }
     .offer{

@@ -145,6 +145,7 @@ body{
         -webkit-transform: translateY(10px);
         -ms-transform: translateY(10px);
         transform: translateY(10px);
+        stroke-width: .3rem; 
     }
 }
 #scroll-icon rect {
@@ -153,7 +154,7 @@ body{
 }
 #scroll-icon path{
     stroke: var(--accent-color);
-    stroke-width: .2rem; 
+    stroke-width: .1rem; 
     -webkit-animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
     animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
 }
