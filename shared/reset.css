@@ -53,9 +53,6 @@ a{
     -webkit-cursor: pointer;
     cursor: pointer;
 }
-a:any-link{
-    color: black;
-}
 
 img {
     display: block;

@@ -119,7 +119,7 @@ body{
 .hero{
     position: relative;
     background-color: white;
-    background: url(/imgs/backgrounds/n_light.svg);
+    background: url(../imgs/backgrounds/n_light.svg);
     overflow-x: hidden;
 }
 .img-holder{
@@ -367,7 +367,7 @@ body{
     height: 100%;
     z-index: -1;
     border-radius: inherit;
-    background: url(/imgs/backgrounds/ffflux.svg);
+    background: url(../imgs/backgrounds/ffflux.svg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -564,7 +564,7 @@ body{
 /* brief */
 .brief{
     color: white;
-    background: url(/imgs/backgrounds/dense-acc-specsm.svg);
+    background: url(../imgs/backgrounds/dense-acc-specsm.svg);
     background-attachment: fixed;
     text-align: center;
     width: 100%;
@@ -633,7 +633,7 @@ body{
     min-height: 100vh;
     min-height: 100dvh;
     background-color: #ffffff;
-    background: url(/imgs/backgrounds/n_light.svg);
+    background: url(../imgs/backgrounds/n_light.svg);
     color: black;
 }
 .gallery,
@@ -744,7 +744,7 @@ body{
     inset: 0;
     width:100%;
     height:100%;
-    content: url(/imgs/resized-p/play-circle.svg);
+    content: url(../imgs/resized-p/play-circle.svg);
     display: -webkit-grid;
     display: -ms-grid;
     display: grid;

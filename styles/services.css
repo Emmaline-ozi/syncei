@@ -59,7 +59,7 @@ body{
     content: '';
     position: absolute;
     inset: 0;
-    background: url(/imgs/resized-p/service2.jpg);
+    background: url(../imgs/resized-p/service2.jpg);
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
@@ -184,7 +184,7 @@ body{
     min-height: 100dvh;
     padding-inline: 1rem;
     background-color: black;
-    background: url(/imgs/backgrounds/dense-acc-specsm.svg);
+    background: url(../imgs/backgrounds/dense-acc-specsm.svg);
     background-repeat: no-repeat;
     background-size: fill;
     background-attachment: fixed;
@@ -338,17 +338,17 @@ body{
     background-repeat: no-repeat;
 }
 .first{
-    background-image: url(/imgs/resized-p/service3.jpg);
+    background-image: url(../imgs/resized-p/service3.jpg);
     background-attachment: fixed;
     background-position: bottom;
 }
 .second{
-    background-image: url(/imgs/resized-p/service2.jpg);
+    background-image: url(../imgs/resized-p/service2.jpg);
     background-attachment: fixed;
     background-position: center;
 }
 .third{
-    background-image: url(/imgs/resized-p/service1.jpg);
+    background-image: url(../imgs/resized-p/service1.jpg);
     background-attachment: fixed;
     background-position: center;
 }
