@@ -231,7 +231,7 @@ textarea:focus::placeholder{
   color: gray;
 }
 .display-attach .file-name::before{
-    content: url(/imgs/svg/attach_add.svg);
+    content: url(../imgs/svg/attach_add.svg);
     margin-right: .5rem;
 }
 .display-attach .close-button{

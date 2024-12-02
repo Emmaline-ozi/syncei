@@ -39,7 +39,7 @@ pointer-events: none;
 }
 
 body{
-    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
+    background: url(../imgs/backgrounds/dense-acc-light-specsm.svg);
     background-attachment: fixed;
 }
 /* backgrounds */
@@ -49,13 +49,13 @@ body{
     inset: 0;
     width: 100%;
     height: 100%;
-    background: url(/imgs/backgrounds/dense-acc-specsm.svg);
+    background: url(../imgs/backgrounds/dense-acc-specsm.svg);
     background-attachment: scroll; 
     background-size: fill;
 }
 @media(max-width:768px){
     .backit_black{
-        background: url(/imgs/backgrounds/burn.svg);
+        background: url(../imgs/backgrounds/burn.svg);
         background-attachment: scroll;
         background-size: cover;
         background-repeat: no-repeat;
@@ -73,7 +73,7 @@ body{
 
 
 .back_white{
-    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
+    background: url(../imgs/backgrounds/dense-acc-light-specsm.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -109,7 +109,7 @@ body{
     position: absolute;
     inset: 0;
     z-index: -100;
-    background: url(/imgs/backgrounds/n_light.svg);
+    background: url(../imgs/backgrounds/n_light.svg);
     background-attachment: fixed; 
     background-position: bottom top;
     background-size: cover;
@@ -314,7 +314,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('/imgs/svg/curve.svg');
+    background-image: url('../imgs/svg/curve.svg');
     background-size: cover;        
     background-position: center;  
     background-repeat: no-repeat;  
@@ -1143,7 +1143,7 @@ body{
     row-gap: 1rem;
     border: 3px solid #ddd;
     border-radius: 1rem;
-    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
+    background: url(../imgs/backgrounds/dense-acc-light-specsm.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1246,7 +1246,7 @@ body{
     position: absolute;
     inset: 0;
     z-index: -100;
-    background: url(/imgs/backgrounds/dddepth-320.jpg);
+    background: url(../imgs/backgrounds/dddepth-320.jpg);
     background-attachment: fixed; 
     background-position: bottom top;
     background-size: cover;
