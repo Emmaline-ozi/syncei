@@ -70,16 +70,16 @@ window.onscroll = function() {
 };
 
 // preloader
-const loaderContainer = document.querySelector('.loader-container');
-const pageContent = document.querySelector('#page-content'); 
-document.body.classList.add('no-scroll');
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    loaderContainer.classList.add('away');
-      setTimeout(() => {
-        pageContent.classList.add('shown');
-        document.body.classList.remove('no-scroll');
-      }, 500);
-  }, 3000);
-});
+// const loaderContainer = document.querySelector('.loader-container');
+// const pageContent = document.querySelector('#page-content'); 
+// document.body.classList.add('no-scroll');
+// window.addEventListener('load', () => {
+//   setTimeout(() => {
+//     loaderContainer.classList.add('away');
+//       setTimeout(() => {
+//         pageContent.classList.add('shown');
+//         document.body.classList.remove('no-scroll');
+//       }, 500);
+//   }, 3000);
+// });
 

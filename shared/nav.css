@@ -694,13 +694,13 @@
 }
 
 /* preloader */
-body.no-scroll::-webkit-scrollbar{
+/* body.no-scroll::-webkit-scrollbar{
     display: none;   
 }
 body.no-scroll{
     overflow-y: hidden;
-}
-.loader-container{
+} */
+/* .loader-container{
     z-index: 1000;
     position: fixed;
     inset: 0;
@@ -780,4 +780,4 @@ body.no-scroll{
     visibility: visible;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-} 
+}  */
