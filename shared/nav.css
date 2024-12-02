@@ -781,8 +781,3 @@ body.no-scroll{
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 } 
-
-body{
-    min-height: 300dvh;
-    background-color: plum;
-}
