@@ -81,7 +81,7 @@
     width: 50%;
     height: 100vh;
     z-index: var(--z-block);
-    background: url(imgs/backgrounds/n2.svg);
+    background: url(/imgs/backgrounds/n2.svg);
 }
 .block.block-left{
     left: 0;
@@ -262,7 +262,7 @@
     font-weight: 400;
 }
 .logos-slide span::after{
-   content: url(logos/star1.svg);
+   content: url(/logos/star1.svg);
    margin: 1rem;
 }
   @media (max-width:800px){
@@ -283,7 +283,7 @@ section.inter{
     padding: 5%;
     min-height: 50vh;
     min-height: 50dvh;
-    background: url(imgs/backgrounds/dense-acc-light-specsm.svg);
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
     backdrop-filter: (24px);
     -webkit-backdrop-filter: blur(60px);
 }
@@ -525,7 +525,7 @@ section.inter{
    color: white;
    text-align: center;
    background-color: black;
-   background: url(imgs/backgrounds/dense-acc-specsm.svg);
+   background: url(/imgs/backgrounds/dense-acc-specsm.svg);
    background-attachment: fixed;
 }
 .divider{
@@ -801,7 +801,7 @@ section.inter{
     min-height: -webkit-max-content;
     min-height: -moz-max-content;
     min-height: max-content;
-    background: url(imgs/backgrounds/dense-acc-light-specsm.svg);
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);
 }
 .testimonials h2{
     font-weight: 500;
@@ -930,7 +930,7 @@ section.inter{
 
     height: 100vh;
     height: 100dvh;
-    background: url(imgs/backgrounds/dense-acc-light-specsm.svg);  
+    background: url(/imgs/backgrounds/dense-acc-light-specsm.svg);  
 }
 .cta-card{
     z-index: 10;
@@ -963,7 +963,7 @@ section.inter{
     height: 100%;
     z-index: -1;
     border-radius: 2rem;
-    background: url(imgs/backgrounds/dddepth-320.jpg);
+    background: url(/imgs/backgrounds/dddepth-320.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover; 
