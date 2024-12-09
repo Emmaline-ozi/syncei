@@ -1192,14 +1192,6 @@ body{
     color: #5c5b5c;
 }
 
-.client-stack{
-    -ms-scroll-snap-type: inline mandatory;
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1rem;
-}
-.c-card{
-    scroll-snap-align: start;
-}
 .client-stack:first-of-type{
     padding-left: 1rem;
 }
