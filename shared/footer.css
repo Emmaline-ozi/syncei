@@ -3,7 +3,7 @@
     min-height: 100vh;
     min-height: 100dvh;
    background-color: plum;
-   background: url(/imgs/backgrounds/n001.svg), plum;
+   background: url(../imgs/backgrounds/n001.svg), plum;
    background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
