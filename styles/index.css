@@ -142,8 +142,8 @@ body{
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
 }
 
 .hero .letter{
@@ -292,18 +292,18 @@ body{
    content: url(../logos/star1.svg);
    margin: 1rem;
 }
-  @media (max-width:800px){
-    .logos:before { 
-       width: 3rem;
-      } 
-      .logos:after {
-        width: 3rem;
-      }
-      .logos-slide {  
-        -webkit-animation-duration: 50s;  
-        animation-duration: 50s;
-      }
-  }
+@media (max-width:800px){
+.logos:before { 
+    width: 3rem;
+    } 
+    .logos:after {
+    width: 3rem;
+    }
+    .logos-slide {  
+    -webkit-animation-duration: 50s;  
+    animation-duration: 50s;
+    }
+}
 /*======= inter section===== */
 section.inter{
     width: 100%;
@@ -313,11 +313,12 @@ section.inter{
 }
 .graphic div{
     margin: auto;
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
 }
-.graphic div img{
-    margin: auto;
-    display: block;
-}
+
 .dsp{
     margin-top: 2rem;
 }
@@ -426,15 +427,21 @@ section.inter{
     font-weight: 700;
     text-align: center;
     color:black;
-    -webkit-transition: background-color 0.4s;
-    -o-transition: background-color 0.4s;
-    transition: background-color 0.4s;
+    -webkit-transition: background-color 0.4s, box-shadow 0.4s;
+    -o-transition: background-color 0.4s, box-shadow 0.4s;
+    transition: background-color 0.4s, box-shadow 0.4s;
+    display: -ms-grid;
+    display: -webkit-grid;
+    display: grid;
+    place-content: center;
 }
 .offer:hover{
     background-color: var(--secondary-color);
+    -webkit-box-shadow: 0 0 10px 4px var(--secondary-color);
+    box-shadow: 0 0 10px 4px var(--secondary-color);
 }
 /* buttons expand full width  */
-@media (max-width:760px){
+@media (max-width: 760px){
    .inter .learn-more{
         margin-top: 1rem;
         display: block;
@@ -442,15 +449,11 @@ section.inter{
         height: 3rem;
     }
     .learn-more .circle:active {
-        -webkit-box-shadow: 0 0 10px var(--accent-color); 
+       -webkit-box-shadow: 0 0 10px var(--accent-color); 
        box-shadow: 0 0 10px var(--accent-color);
     }
     .offer{
         margin: 0;
-        display: -ms-grid;
-        display: -webkit-grid;
-        display: grid;
-        place-content: center;
         width: 100%;
         border-radius: 1rem;
         height: 3rem;

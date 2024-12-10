@@ -1,41 +1,11 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     if (isSafari()) {
-//         const video = document.querySelector("video");
-//         if (video) {
-//             video.setAttribute("controls", "controls");
-//         }
-//     }
-// });
-// Initialize Lenis with faster settings
-// const lenis = new Lenis({
-//     smooth: true,
-//     lerp: 0.2, // Make scrolling faster (default is 0.1, closer to 1 is faster)
-//   });
-  
-//   // Sync Lenis with the browser's animation frame
-//   function raf(time) {
-//     lenis.raf(time * 1000);
-//     requestAnimationFrame(raf);
-//   }
-//   requestAnimationFrame(raf);
-  
-//   // Handle anchor links for smooth scrolling
-//   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//     anchor.addEventListener('click', (e) => {
-//       e.preventDefault(); // Prevent default anchor link behavior
-  
-//       const targetId = anchor.getAttribute('href').substring(1); // Get target ID
-//       const targetElement = document.getElementById(targetId); // Find target element
-  
-//       if (targetElement) {
-//         // Use Lenis to scroll to the target
-//         lenis.scrollTo(targetElement, {
-//           duration: 0.8, // Faster smooth scroll (reduce for quicker scroll)
-//           easing: (t) => t, // Linear easing for snappier scrolling
-//         });
-//       }
-//     });
-//   });
+document.addEventListener("DOMContentLoaded", function() {
+    if (isSafari()) {
+        const video = document.querySelector("video");
+        if (video) {
+            video.setAttribute("controls", "controls");
+        }
+    }
+});
   
 gsap.to(".letters", 2, {
     top: "20",
