@@ -112,9 +112,9 @@ body{
 .social-links a {
     color: var(--secondary-color);
     font-weight: 700;
-    -webkit-transition: color .2s ease-in-out;
-       -o-transition: color .2s ease-in-out;
-       transition: color .2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+       -o-transition: color 0.2s ease-in-out;
+       transition: color 0.2s ease-in-out;
     display: inline-block;
     padding: 0 1rem;
    text-shadow:  0 0 10px black;
@@ -145,7 +145,7 @@ body{
         -webkit-transform: translateY(10px);
         -ms-transform: translateY(10px);
         transform: translateY(10px);
-        stroke-width: .3rem; 
+        stroke-width: .23rem; 
     }
 }
 #scroll-icon rect {
@@ -155,8 +155,8 @@ body{
 #scroll-icon path{
     stroke: var(--accent-color);
     stroke-width: .1rem; 
-    -webkit-animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
-    animation: stride 1.5s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
+    -webkit-animation: stride 1s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
+    animation: stride 1s infinite cubic-bezier(0.215, 0.610, 0.355, 1) alternate;
 }
 
 @media(min-width: 768px){
@@ -184,10 +184,6 @@ body{
     min-height: 100dvh;
     padding-inline: 1rem;
     background-color: black;
-    background: url(../imgs/backgrounds/dense-acc-specsm.svg);
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-attachment: fixed;
     color: white;
 }
 .entry{
@@ -221,18 +217,18 @@ body{
     font-weight: 300;
     text-shadow: 0 0 1px white;
     border-radius: .5rem;
-    -webkit-transition: background-color .4s;
-       -o-transition: background-color .4s;
-       transition: background-color .4s;
+    -webkit-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .accordion:not(:first-child){
     margin-top: 1rem;
@@ -244,9 +240,10 @@ body{
     -webkit-transform: scale(0.6);
         -ms-transform: scale(0.6);
             transform: scale(0.6);
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s;
+    -webkit-transition: transform 0.4s;
+    -o-transition: transform 0.4s;
+    transition: transform 0.4s;
+    will-change: transform;
 }
 .accordion:hover, 
 .accordion:active{
@@ -277,9 +274,9 @@ body{
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-     -webkit-box-align: center;
-         -ms-flex-align: center;
-             align-items: center; 
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
     color: var(--accent-color);
     text-wrap: nowrap;
     gap: 1rem;
@@ -311,8 +308,8 @@ body{
 }
 .cta-link svg path{
     stroke: var(--accent-color);
-    -webkit-animation: glide 1.3s ease-in-out infinite alternate;
-    animation: glide 1.3s ease-in-out infinite alternate;
+    -webkit-animation: glide 0.6s ease-in-out infinite alternate;
+    animation: glide 0.6s ease-in-out infinite alternate;
 }
 .cta-link:hover svg path,
 .cta-link:active svg path,
@@ -329,27 +326,24 @@ body{
 }
 
 .entry__media{
-    background-color: var(--white-5);
     border: 10px solid white;
     border-radius: 5px;
     width: 100%;
     min-height: 50dvh;
-    background-color: var(--white-5);
+    background-color: white;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .first{
     background-image: url(../imgs/resized-p/service3.jpg);
-    background-attachment: fixed;
     background-position: bottom;
 }
 .second{
     background-image: url(../imgs/resized-p/service2.jpg);
-    background-attachment: fixed;
     background-position: center;
 }
 .third{
     background-image: url(../imgs/resized-p/service1.jpg);
-    background-attachment: fixed;
     background-position: center;
 }
 .entry__media img{
@@ -357,26 +351,19 @@ body{
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+    -o-object-position: center;
+    object-position: center;
     display: block;  
 }
 @media (min-width: 768px){
     .first{
-        background-attachment: scroll;
         background-position: bottom center;
-        background-size: cover;
     }
     .second{
-        background-color: white;
-        background-attachment: scroll;
-        background-size: contain;
         background-position: bottom top;
     }
     .third{
-        background-attachment: scroll;
-        background-position: center;
-        background-size: cover;     
+        background-position: center;     
     }
 }
 
@@ -385,10 +372,10 @@ body{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-             -webkit-box-orient: vertical;
-             -webkit-box-direction: reverse;
-                 -ms-flex-direction: column-reverse;
-                     flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
 }
 
@@ -468,16 +455,15 @@ body{
     inset: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-   
+    z-index: -1; 
 }
 .backit {
     background: -o-linear-gradient(24deg, #844bc6, #ffffff, #000000, #cfb2ff);
     background: linear-gradient(66deg, #844bc6, #ffffff, #000000, #cfb2ff);
     background-size: 800% 800%;
-    -webkit-animation: backmove 30s ease infinite;
-    -o-animation: backmove 30s ease infinite;
-    animation: backmove 30s ease infinite;
+    -webkit-animation: backmove 15s ease infinite;
+    -o-animation: backmove 15s ease infinite;
+    animation: backmove 15s ease infinite;
 }
 
 @-webkit-keyframes backmove {
@@ -552,8 +538,6 @@ body{
     box-shadow: inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%),
     0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))),
     0 0 0 calc(var(--active, 0) * 0.375rem) rgba(255, 167, 255, 0.336);
-    -webkit-transition: all var(--transtion);
-    transition: all var(--transtion);
     z-index: 0;
   }
   
@@ -751,11 +735,13 @@ body{
     position: absolute;
     left: 0;
     top: 0;
+    opacity: 0.3;
 }
 .pin2{
     position: absolute;
     bottom: -10px;
     right: 0;
+    opacity: 0.3;
 }
 .pin2 svg{
     -webkit-transform: rotate(180deg);

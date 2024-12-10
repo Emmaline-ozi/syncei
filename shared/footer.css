@@ -6,7 +6,6 @@
    background: url(../imgs/backgrounds/n001.svg), plum;
    background-repeat: no-repeat;
    background-size: cover;
-   background-attachment: fixed;
    width: 100%;
    min-height: -webkit-max-content;
    min-height: -moz-max-content;

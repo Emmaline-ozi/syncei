@@ -20,27 +20,30 @@
 }
 /* lenis css */
 html.lenis, html.lenis body {
-    height: auto;
-    }
-    
-    .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-    }
-    
-    .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-    touch-action: none;
-        /*====peg==== Safari-friendly alternative */
-    }
-    
-    .lenis.lenis-stopped {
-    overflow: hidden;
-    }
-    
-    .lenis.lenis-smooth iframe {
-    pointer-events: none;
-    }
-    
+height: auto;
+}
+
+.lenis.lenis-smooth {
+scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+overscroll-behavior: contain;
+touch-action: none;
+    /*====peg==== Safari-friendly alternative */
+}
+
+.lenis.lenis-stopped {
+overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+pointer-events: none;
+}
+
+body{
+    background-color: #fffbf7;
+}
 
 .hero{
     width: 100%;
@@ -104,7 +107,7 @@ html.lenis, html.lenis body {
     width: 50%;
     height: 100vh;
     z-index: var(--z-block);
-    background-color: white;
+    background-color: #fffbf7;
     background: url(../imgs/backgrounds/n2.svg);
 }
 .block.block-left{
@@ -307,8 +310,6 @@ section.inter{
     padding: 5%;
     min-height: 50vh;
     min-height: 50dvh;
-    background-color: white;
-    background: url(../imgs/backgrounds/dense-acc-light-specsm.svg);
 }
 .graphic div{
     margin: auto;
@@ -425,10 +426,6 @@ section.inter{
     font-weight: 700;
     text-align: center;
     color:black;
-    display: -ms-grid;
-    display: -webkit-grid;
-    display: grid;
-    place-content: center;
     -webkit-transition: background-color 0.4s;
     -o-transition: background-color 0.4s;
     transition: background-color 0.4s;
@@ -450,7 +447,10 @@ section.inter{
     }
     .offer{
         margin: 0;
-        display: block;
+        display: -ms-grid;
+        display: -webkit-grid;
+        display: grid;
+        place-content: center;
         width: 100%;
         border-radius: 1rem;
         height: 3rem;
@@ -465,18 +465,13 @@ section.inter{
     .learn-more .circle .icon.arrow {
         opacity: 0;
     } 
-    .offer{
-        border-radius: 1rem;
-        text-align: center;
-        height: 3rem;
-    }
     .learn-more .button-text {
         margin: 0;
         color: #ffffff;
         text-align: center;
     }
     .inter .btm{
-        word-spacing: .25em;
+        word-spacing: 0.25em;
         letter-spacing: 3px;
     }
 }
@@ -538,7 +533,6 @@ section.inter{
    color: white;
    text-align: center;
    background-color: black;
-   background: url(../imgs/backgrounds/dense-acc-specsm.svg);
 }
 .divider{
     position: absolute;
@@ -702,15 +696,15 @@ section.inter{
         background-color:black;
         padding: 1rem;
     }
-}
-
-@media (min-width: 600px){
     .grouped-grid .subprojects img:hover, 
     .curve:hover .curve-box img{
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
         transform: scale(1.2);
     }   
+}
+
+@media (min-width: 600px){  
     .grouped-grid .subprojects .curve{
         width: 7.5rem;
         height: 7.5rem;

@@ -87,39 +87,10 @@ body{
       opacity: 1;
     }
 } 
-.rec{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 2em;
-    width: 18px;
-    height: 18px;
-}
-.rec-dot{
-    position: relative;
-    width: 18px;
-    height: 18px;
-}
-.dot{
-    width: 18px;
-    height: 18px;
-    background: red;
-    border-radius: 50%;
-    -webkit-animation: pulse 3s infinite ease-in-out alternate;
-    animation: pulse 3s infinite ease-in-out alternate;
-}
-.rec-dot img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transform: scale(5);
-    -ms-transform: scale(5);
-        transform: scale(5);   
-}
+
 .hero{
     position: relative;
-    background-color: white;
-    background: url(../imgs/backgrounds/n_light.svg);
+    background-color: #fffbf7;
     overflow-x: hidden;
 }
 .img-holder{
@@ -368,7 +339,6 @@ body{
     z-index: -1;
     border-radius: inherit;
     background: url(../imgs/backgrounds/ffflux.svg);
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -564,8 +534,6 @@ body{
 /* brief */
 .brief{
     color: white;
-    background: url(../imgs/backgrounds/dense-acc-specsm.svg);
-    background-attachment: fixed;
     text-align: center;
     width: 100%;
     margin-top: 1.5rem;
@@ -632,8 +600,7 @@ body{
     padding-top: 3rem;
     min-height: 100vh;
     min-height: 100dvh;
-    background-color: #ffffff;
-    background: url(../imgs/backgrounds/n_light.svg);
+    background-color: #fffbf7;
     color: black;
 }
 .gallery,

@@ -11,7 +11,9 @@
 html{
     scroll-behavior: smooth;
 }
-
+body{
+    background-color: #fffbf7;
+}
 .container-contact{
     min-height: 50vh;
     min-height: 50dvh;
