@@ -1240,9 +1240,9 @@ body{
 .panel{
     padding: .5rem .6rem .5rem 1rem;
     height: auto;
-    display: none;
     border-bottom: 4px solid var(--secondary-color);
 }
+
 
 @media (min-width: 768px){
     .faqs{

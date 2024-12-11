@@ -86,10 +86,18 @@ body{
      -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none; 
-    mix-blend-mode:hard-light;   
 }
 .hero .copy span{
     color: var(--accent-color);
+}
+.hero .copy p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 0 0 20px #ffffff;
+}
+.hero .mix {
+    width: 6.9rem;
 }
 
 .slide-right{
@@ -155,12 +163,7 @@ body{
     z-index: var(--z-letter);
     mix-blend-mode: difference;
 }
-.hero .copy p{
-    font-size: 0.6rem;
-    text-align: center;
-    font-weight: 900;
-    text-shadow: 0 0 20px #ffffff;
-}
+
 .top img{
     width: 5rem;
 }
@@ -184,6 +187,9 @@ body{
    
 }
 @media  (min-width: 1024px){
+    .hero .copy{
+        mix-blend-mode:hard-light;   
+    }
     .hero .copy p{
         font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem); 
         font-weight: 500;
@@ -285,7 +291,7 @@ body{
     user-select: none;
 }
 .logos-slide span:nth-of-type(even){
-    color: rebeccapurple;
+    color: purple;
     font-weight: 400;
 }
 .logos-slide span::after{
@@ -706,11 +712,10 @@ section.inter{
         transform: scale(1.2);
     }   
 }
-
-@media (min-width: 600px){  
+@media(min-width: 600px){
     .grouped-grid .subprojects .curve{
-        width: 7.5rem;
-        height: 7.5rem;
+        width: 6rem;
+        height: 6rem;
     }
     .curve:hover .curve-box{
         -webkit-transform: scale(1.1);
@@ -718,6 +723,7 @@ section.inter{
         transform: scale(1.1);
     }
 }
+
 @media (min-width: 900px){
     .projects .header-proj{
         display: -webkit-box;
@@ -765,13 +771,13 @@ section.inter{
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
+
 }
 .divider-middle{
     position: relative;
     min-height: 9dvh;
     z-index: 100;
 }
-
 .custom-shape-divider-top {
     position: absolute;
     top: -5px;
@@ -783,14 +789,12 @@ section.inter{
     -ms-transform: rotate(180deg);
         transform: rotate(180deg);
 }
-
 .custom-shape-divider-top svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 100px;
 }
-
 .custom-shape-divider-top .shape-fill {
     fill: #000000;
 }

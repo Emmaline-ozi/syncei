@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Animation for larger screens
     entries.forEach(entry => {
       let entryText = entry.querySelector('.entry__left');
-      let entryMedia = entry.querySelector('.entry__right'); 
-  
+      let entryMedia = entry.querySelector('.entry__right');  
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: entry, 
@@ -58,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
 });
 
 // accordion
@@ -74,7 +72,8 @@ const acc = document.querySelectorAll(".accordion");
           accordion.classList.remove("active");
           const panel = accordion.nextElementSibling;
           if (panel) {
-            panel.style.display = "none"; // Hide all panels
+            panel.style.height = null; // Hide all panels
+            panel.classList.remove("open");
           }
         });
   
@@ -84,10 +83,9 @@ const acc = document.querySelectorAll(".accordion");
   
           let panel = this.nextElementSibling;
           if (panel) {
-            panel.style.display = "block"; // Show the current panel
-          }
-  
-          
+            panel.style.height = panel.scrollHeight + "px";
+            panel.classList.add("open"); // Add open class
+          }        
         }
       });
     };

@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contentSections = document.querySelectorAll('.stn');
     
     // Pin the sidebar inside the parent section
-    gsap.matchMedia().add("(max-width: 1024px)", () => {
+    gsap.matchMedia().add("(max-width: 1023px)", () => {
     ScrollTrigger.create({
       trigger: parentSection,    
       pin: stickySidebar,        
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 trigger:".team-flex-wrap",
                 start:"top 5%",
                 pin: true,
-                ease: "none",
+                ease: "ease-in-out",
                 scrub: true,
                 markers: false,
             }

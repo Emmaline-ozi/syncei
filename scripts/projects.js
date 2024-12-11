@@ -33,12 +33,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 
 // hero
+
 document.addEventListener("DOMContentLoaded", () => {
-    ScrollTrigger.create({
+
+  ScrollTrigger.create({
             trigger: ".hero",
             start:  "top top",
             end: "bottom top",
-            scrub: true,
+            scrub: 0.5,
             pin: true,
             markers: false,
         });
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 endTrigger: ".hero",
                 start: "top top",
                 end: "bottom top",
-                pin: true,
+                pin: false,
                 scrub: true,
                 markers: false,
             }
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 endTrigger: ".hero",
                 start: "top top",
                 end: "bottom top",
-                pin: true,
+                pin: false,
                 scrub: true,
                 markers: false,
             }
@@ -77,9 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollTrigger:{
                 endTrigger: ".hero",
                 start: "top top",
-                end: "bottom top",
+                end: "bottom 10%",
                 scrub: true,
-                pin: true,
+                pin: false,
+                ease: "power2.inOut",  
                 markers: false,
             }
         });
@@ -90,8 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   endTrigger: ".hero",
                   start: "top top",
                   end: "bottom top",
-                  scrub: true,
-                  pin: true,
+                  scrub: 0.5,
+                  pin: false,
+                  ease: "power2.inOut",  
                   markers: false,
               }
           });
@@ -107,18 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
               }
           });
           gsap.to(".scroll", {
-              opacity: 0,
-              ease: "power2.inOut",
-              scrollTrigger:{
-                  endTrigger: ".hero",
-                  start: "top top",
-                  end: "bottom top",
-                  scrub: true,
-                  markers: false,
-              }
-          });
-          gsap.to(".record", {
-              xPercent: 550,
               opacity: 0,
               ease: "power2.inOut",
               scrollTrigger:{
@@ -159,10 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   xPercent: 0,
                   scrollTrigger: {
                     endTrigger: ".hero",
-                    start: "10% top",
-                    end: "bottom top",
+                    start: "5% top",
+                    end: "bottom 5%",
                     scrub: true,
-                    pin: true,
+                    pin: false,
                     markers: false,   
                   },
                   ease: "ease-in-out",  

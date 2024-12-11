@@ -3,17 +3,20 @@
     min-height: 100vh;
     min-height: 100dvh;
    background-color: plum;
-   background: url(../imgs/backgrounds/n001.svg), plum;
+   background: url(../imgs/backgrounds/n001.svg), var(--accent-color);
    background-repeat: no-repeat;
    background-size: cover;
    width: 100%;
    min-height: -webkit-max-content;
    min-height: -moz-max-content;
    min-height: max-content;
+   margin-top: 2rem;
    padding-top: 2rem;
    padding-left: 4%;
    padding-right: 5%;
    padding-bottom: .5rem;
+   border-top-left-radius: 1rem;
+   border-top-right-radius: 1rem;
 }
 .grid-ft{
     display: -ms-grid;
@@ -72,22 +75,40 @@
    font-size: 1.2rem;
    font-weight: 500;
    padding-left: .5rem;
-   -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+   -webkit-transition: color .2s, padding .4s;
+    -o-transition: color .2s, padding .4s;
+    transition: color .3s, padding .4s;
 }
 .explore-a li:hover a,
 .socials li:hover a{
    color: var(--secondary-color);
-   padding-left: .7rem;
+   padding-left: 1rem;
+}
+@media (min-width: 1024px){
+    .explore-a li a{
+        padding-left: 0;
+    }
+    .explore-a li:hover a{
+        padding-left: 0;
+    }
+}
+.explore-a li a{
+    width: 100%;
+    display: block;
 }
 .explore-a li{
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+    width: 100%;
+    -webkit-transition: border .2s;
+    -o-transition: border .2s;
+    transition: border .2s;
 }
 .explore-a li:hover {
     border-left: 1px solid white;
+}
+@media (min-width: 1024px){
+    .explore-a li:hover {
+        border-left: unset;
+    }
 }
 .socials a svg {
    width: 20px;
