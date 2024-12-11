@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/shared/reset.css">
-    <link rel="stylesheet" href="/shared/nav.css">
-    <title>nav improved</title>
-</head>
-<body>
-
     <div class="loader-container">
 		<svg class="svg-loader" width="537" height="388" viewBox="0 0 537 388" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="name">
@@ -35,12 +24,12 @@
         <nav class="nav stretch" id="navbar">
             <div class="upper-nav">
                 <a href="#" class="left-side-nav">
-                    <img src="/logos/footer-logo2.svg" alt="logo" height="30">
+                    <img src="./logos/footer-logo2.svg" alt="logo" height="30">
                 </a>
 
                 <div class="toggler">
                     <div class="action has-submenu">                     
-                            <img src="/imgs/svg/icons/command.svg" alt="" height="20">                      
+                            <img src="./imgs/svg/icons/menu-vertical2.svg" alt="" height="20">                      
                         <ul>
                             <li><a href="">Call</a></li>
                             <li><a href="">Mail</a></li>
@@ -59,9 +48,6 @@
             </div>
             <div class="dropdown" id="dropdown">
                 <ul class="list">
-                    <li class="lone">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
                     <li class="has-submenu" id="has-submenu">
                         <a href="#" class="nav-link">Services</a>
                         <span>
@@ -73,7 +59,7 @@
                             <li><a href="#">Design</a></li>
                             <li><a href="#">Development</a></li>
                             <li><a href="#">Solutions</a></li>
-                            <li><a href="#">View all</a></li>
+                            <li><a href="./pages/services.html">View all</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu" id="has-submenu">
@@ -89,8 +75,11 @@
                             <li><a href="#">Faqs</a></li>
                             <li><a href="#">Work With US</a></li>
                             <li><a href="#">Customer Care</a></li>
-                            <li><a href="#">View all</a></li>
+                            <li><a href="./pages/company.html">View all</a></li>
                         </ul>
+                    </li>
+                    <li class="lone">
+                        <a href="index.html" class="nav-link">Careers</a>
                     </li>
                     <li class="has-submenu" id="has-submenu">
                         <a href="#" class="nav-link">Projects</a>
@@ -102,18 +91,14 @@
                         <ul id="sub-menu">
                             <li><a href="#">Awards</a></li>
                             <li><a href="#">Gallery</a></li>
-                            <li><a href="#">View all</a></li>
+                            <li><a href="./pages/projects.html">View all</a></li>
                         </ul>
                     </li>
                     <li class="lone">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="./pages/contact.html" class="nav-link">Contact</a>
                     </li>
                 </ul>
-                <a href="#" class="nav-cta">Start a Project</a>
+                <a href="./pages/contact.html" class="nav-cta">Start a Project</a>
             </div>
         </nav>
     </header>
-
-<script src="/shared/nav.js"></script>
-</body>
-</html>

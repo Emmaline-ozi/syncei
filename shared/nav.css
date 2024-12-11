@@ -546,21 +546,21 @@
         -ms-transform: rotate(180deg);
             transform: rotate(180deg); 
     }
-    
-    @-webkit-keyframes glowright {
-        0%{background-position:0% 53%}
-        50%{background-position:100% 48%}
-        100%{background-position:0% 53%}
+
+    @-webkit-keyframes buttonwaver {
+        0%{background-position:0% 58%}
+        50%{background-position:100% 43%}
+        100%{background-position:0% 58%}
     }
-    @-o-keyframes glowright {
-        0%{background-position:0% 53%}
-        50%{background-position:100% 48%}
-        100%{background-position:0% 53%}
+    @-moz-keyframes buttonwaver {
+        0%{background-position:0% 58%}
+        50%{background-position:100% 43%}
+        100%{background-position:0% 58%}
     }
-    @keyframes glowright {
-        0%{background-position:0% 53%}
-        50%{background-position:100% 48%}
-        100%{background-position:0% 53%}
+    @keyframes buttonwaver {
+        0%{background-position:0% 58%}
+        50%{background-position:100% 43%}
+        100%{background-position:0% 58%}
     }
     .list .has-submenu ul {
         position: absolute;
@@ -582,12 +582,12 @@
         -webkit-transform: translateY(-.5rem);
         -ms-transform: translateY(-.5rem);
         transform: translateY(-.5rem);
-        background: -o-linear-gradient(359deg, #cfbae9, #8e4fdc, #a44fdc);
-        background: linear-gradient(91deg, #cfbae9, #8e4fdc, #a44fdc);
-        background-size: 600% 600%;
-        -webkit-animation: glowright 5s ease infinite;
-        -o-animation: glowright 5s ease infinite;
-        animation: glowright 5s ease infinite;
+        background: -o-linear-gradient(175deg, #000000, #33025e, #8050a9, #363339);
+        background: linear-gradient(275deg, #000000, #33025e, #8050a9, #363339);
+        background-size: 800% 800%;
+        -webkit-animation: buttonwaver 4s ease infinite;
+        -moz-animation: buttonwaver 4s ease infinite;
+        animation: buttonwaver 4s ease infinite;
         -webkit-transition-property: opacity, visibilty, -webkit-transform;
         transition-property: opacity, visibilty, -webkit-transform;
         -o-transition-property: opacity, visibilty, transform;
@@ -645,24 +645,7 @@
         -webkit-transition-timing-function:ease-in-out ;
         -o-transition-timing-function:ease-in-out ;
         transition-timing-function:ease-in-out ;
-    }
-    
-    @-webkit-keyframes buttonwaves {
-        0%{background-position:0% 53%}
-        50%{background-position:100% 48%}
-        100%{background-position:0% 53%}
-    }
-    @-o-keyframes buttonwaves {
-        0%{background-position:0% 53%}
-        50%{background-position:100% 48%}
-        100%{background-position:0% 53%}
-    }
-    @keyframes buttonwaves {
-        0%{background-position:0% 53%}
-        50%{background-position:100% 48%}
-        100%{background-position:0% 53%}
-    }
-   
+    }  
     .nav-cta{
         display: -webkit-grid;
         display: -ms-grid;
@@ -673,17 +656,18 @@
         width: -moz-max-content;
         width: max-content;    
         background-color: #ffffff;
-        color: #000000;
+        color: white;
         text-align: center;
-        font-weight: 100;
+        font-weight: 700;
         text-wrap: nowrap;
-        padding: .5rem;
-        border-radius: .5rem;
-        background: -o-linear-gradient(359deg, #cfbae9, #8e4fdc, #a44fdc);
-        background: linear-gradient(91deg, #cfbae9, #8e4fdc, #a44fdc);        background-size: 600% 600%; 
-        -webkit-animation: buttonwaves 5s ease infinite;
-        -o-animation: buttonwaves 5s ease infinite;
-        animation: buttonwaves 5s ease infinite;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background: -o-linear-gradient(175deg, #000000, #33025e, #8050a9, #363339);
+        background: linear-gradient(275deg, #000000, #33025e, #8050a9, #363339);
+        background-size: 800% 800%;
+        -webkit-animation: buttonwaver 4s ease infinite;
+        -moz-animation: buttonwaver 4s ease infinite;
+        animation: buttonwaver 4s ease infinite;
     } 
 
 }
@@ -694,13 +678,8 @@
 }
 
 /* preloader */
-/* body.no-scroll::-webkit-scrollbar{
-    display: none;   
-}
-body.no-scroll{
-    overflow-y: hidden;
-} */
-/* .loader-container{
+
+ .loader-container{
     z-index: 1000;
     position: fixed;
     inset: 0;
@@ -780,4 +759,4 @@ body.no-scroll{
     visibility: visible;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-}  */
+} 
