@@ -760,3 +760,10 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 } 
+
+@media(max-width: 768px){
+    .svg-loader {
+        width: 300px;
+        height: 900px;
+    }
+}
